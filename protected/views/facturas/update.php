@@ -1,21 +1,36 @@
 <?php
 /* @var $this FacturasController */
 /* @var $model Facturas */
-
+$this->pageTitle="Modificar Factura - ".$model->numero;
 $this->breadcrumbs=array(
-	'Facturases'=>array('admin'),
-	$model->id=>array('view','id'=>$model->id),
+	'Facturas'=>array('admin'),
+	$model->numero=>array('view','id'=>$model->id),
 	'Modificar',
 );
 
 $this->menu=array(
-	array('label'=>'Admnistrar Facturas', 'url'=>array('admin')),
-	array('label'=>'Crear Facturas', 'url'=>array('create')),
-	array('label'=>'Ver Facturas', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Administrar Facturas', 'url'=>array('admin')),
+	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
+	);
+$this->bolmenu2=true;
+$cliente=Cliente::model()->findByPk($model->Cliente_id);
+$this->nombreCliente=$cliente->razon_social;
+
+$this->menu2=array(
+	array('label'=>'Ver Cliente', 'url'=>array('cliente/view','id'=>$cliente->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Facturas', 'url'=>array('facturas/listafactura','cliente'=>$cliente->id)),
+	array('label'=>'Ver Factura', 'url'=>array('facturas/view','id'=>$model->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Proyectos', 'url'=>array('proyectos/listaproyecto','cliente'=>$cliente->id)),
+	array('label'=>'Crear Proyectos', 'url'=>array('proyectos/create','cliente'=>$cliente->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Productos', 'url'=>array('productos/listaproducto','cliente'=>$cliente->id)),
+	array('label'=>'Asociar Proyectos', 'url'=>array('proyectos/create','cliente'=>$cliente->id)),
 	
 );
 ?>
 
-<h1>Modificar Facturas <?php echo $model->id; ?></h1>
+<h1>Modificar Facturas <?php echo $model->numero; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

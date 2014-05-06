@@ -36,7 +36,7 @@ class FacturasController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','loadImage','listafactura'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -74,6 +74,16 @@ class FacturasController extends Controller
 		if(isset($_POST['Facturas']))
 		{
 			$model->attributes=$_POST['Facturas'];
+			$model->Usuario_id=Yii::app()->user->id; 
+			if (!empty($_FILES['Facturas']['tmp_name']['binaryFile'])) {
+				$file = CUploadedFile::getInstance($model, 'binaryFile');
+				$model -> fileName = $file -> name;
+				$model -> fileType = $file -> type;
+				$fp = fopen($file -> tempName, 'r');
+				$content = fread($fp, filesize($file -> tempName));
+				fclose($fp);
+				$model -> binaryFile = $content;
+			}
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -146,7 +156,16 @@ class FacturasController extends Controller
 			'model'=>$model,
 		));
 	}
+	
+	public function actionListafactura()
+	{
+	
+		$dataProvider = Facturas::model() -> clienteFactura($_GET['cliente']);
+		$this -> render('listafactura',
+		array('dataProvider' => $dataProvider, 
+		'model' => new Facturas, ));
 
+	}
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
@@ -174,4 +193,11 @@ class FacturasController extends Controller
 			Yii::app()->end();
 		}
 	}
+	public function actionloadImage($id) {
+	$model = $this -> loadModel($id);
+	header('Content-Type: ' . $model -> fileType);
+	print $model -> binaryFile;
+
+}
+	
 }

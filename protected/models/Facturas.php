@@ -20,6 +20,7 @@ class Facturas extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	  public static $Image="";
 	public function tableName()
 	{
 		return 'facturas';
@@ -36,7 +37,17 @@ class Facturas extends CActiveRecord
 			array('fecha, monto, binaryFile, numero', 'required'),
 			array('numero', 'numerical', 'integerOnly'=>true),
 			array('Usuario_id, Cliente_id, estado, monto', 'length', 'max'=>10),
+			array('numero','unique', 'message'=>'Ya se encuentra registrado el numero de factura'),
+			
+			array('fileName', 'length', 'max'=>100),
+			array('fileType', 'length', 'max'=>25),
 			array('fileType, fileName', 'length', 'max'=>100),
+				array('binaryFile', 'file', 
+	        	'types'=>'jpg, gif, png, bmp, jpeg',
+	            'maxSize'=>1024 * 1024 * 10, // 10MB
+	                'tooLarge'=>'La imagen es mayor de 10MB. Por favor, subir una imagen mas pequeña.',
+	            'allowEmpty' => true
+         	),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, Usuario_id, Cliente_id, estado, fecha, monto, binaryFile, fileType, fileName, numero', 'safe', 'on'=>'search'),
@@ -50,8 +61,10 @@ class Facturas extends CActiveRecord
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array(
-		);
+		return array( 
+		'clientes' => array(self::BELONGS_TO, 'Cliente', 'Cliente_id'), 
+		'usuarios' => array(self::BELONGS_TO, 'Usuario', 'Usuario_id'), );
+
 	}
 
 	/**
@@ -69,7 +82,7 @@ class Facturas extends CActiveRecord
 			'binaryFile' => 'Imagen',
 			'fileType' => 'Imagen',
 			'fileName' => 'Imagen',
-			'numero' => 'Numero',
+			'numero' => 'Numero de Factura',
 		);
 	}
 
@@ -116,5 +129,16 @@ class Facturas extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	public function getImagen($width = 100){
+		return html_entity_decode(CHtml::image(Yii::app()->controller->createUrl('facturas/loadImage', array('id'=>$this->id))
+																				,'alt'
+																				,array('width'=>$width)
+																				));
+	}
+	public function clienteFactura($id = NULL) {
+		$criteria = new CDbCriteria;
+		$criteria -> addCondition('Cliente_id=' . $id);
+		return new CActiveDataProvider($this, array('criteria' => $criteria, ));
 	}
 }

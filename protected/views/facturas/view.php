@@ -1,34 +1,54 @@
 <?php
 /* @var $this FacturasController */
 /* @var $model Facturas */
+$this->pageTitle="Factura - ".$model->numero;
 
 $this->breadcrumbs=array(
-	'Facturases'=>array('admin'),
-	$model->id,
+	'Facturas'=>array('admin'),
+	$model->numero,
 );
 
 $this->menu=array(
 	array('label'=>'Administrar Facturas', 'url'=>array('admin')),
-	array('label'=>'Crear Facturas', 'url'=>array('create')),
+	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
+	);
+$this->bolmenu2=true;
+$cliente=Cliente::model()->findByPk($model->Cliente_id);
+$this->nombreCliente=$cliente->razon_social;
+
+$this->menu2=array(
+	array('label'=>'Ver Cliente', 'url'=>array('cliente/view','id'=>$cliente->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Facturas', 'url'=>array('facturas/listafactura','cliente'=>$cliente->id)),
+	array('label'=>'Crear Factura', 'url'=>array('facturas/create','cliente'=>$cliente->id)),
 	array('label'=>'Modificar Facturas', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Eliminar Facturas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Eliminar Facturas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Esta seguro que desea eliminar la factura?')),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Proyectos', 'url'=>array('proyectos/listaproyecto','cliente'=>$cliente->id)),
+	array('label'=>'Crear Proyectos', 'url'=>array('proyectos/create','cliente'=>$cliente->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Productos', 'url'=>array('productos/listaproducto','cliente'=>$cliente->id)),
+	array('label'=>'Asociar Proyectos', 'url'=>array('proyectos/create','cliente'=>$cliente->id)),
+	
 );
 ?>
 
-<h1>Facturas #<?php echo $model->id; ?></h1>
+<h1>Factura #<?php echo $model->numero; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'numero',
-		'fecha',
-		'Usuario_id',
-		'cliente.NombreCompleto',
-		
+		array(
+       	'name'=>'fecha',
+       	'value'=>Yii::app()->dateFormatter->format('dd-MM-yyyy',$model->fecha) ,  
+     	),
+		'clientes.razon_social',		
 		'monto',
-		'binaryFile',
-		'fileType',
-		'fileName',
-		
+		array(
+	       'name'=>'Imagen',
+		   'type'=>'raw',
+	       'value'=>$model->getImagen(200),
+                ),
 	),
 )); ?>
