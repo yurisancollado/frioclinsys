@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Clientes'=>array('admin'),
-	$model->id,
+	$model->razon_social,
 );
 if($model->estado==1)
 	$accionActivo=array('label'=>'Desactivar', 'url'=>'#', 'linkOptions'=>array('submit'=>array('desactivar','id'=>$model->id),'confirm'=>'Esta seguro que desea desactivar el cliente?'));
@@ -23,23 +23,29 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Cliente #<?php echo $model->id; ?></h1>
+<h1>Cliente <?php echo $model->razon_social; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
+		'codigo',
 		'razon_social',
 		'rif',
-		'nit',
-		'codigo',
+		'nit',		
 		'direccion',
 		'telefono',
 		'representante',
-		'estado',
+		'Estado',
 		'username',
-		'password',
-		'created_at',
-		'last_login',
+		array(
+			'name'=>'created_at',
+			'type'=>'text',
+			'value'=>date_format(new DateTime($model->created_at), 'd-m-Y'),
+		),
+		array(
+			'name'=>'last_login',
+			'type'=>'text',
+			'value'=>date_format(new DateTime($model->last_login), 'd-m-Y'),
+		),
 	),
 )); ?>

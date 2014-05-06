@@ -9,10 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Admnistrar Cliente', 'url'=>array('admin')),
-	array('label'=>'Crear Cliente', 'url'=>array('create')),
+	array('label'=>'Administrar Cliente', 'url'=>array('admin')),
+	array('label'=>'Crear Cliente', 'url'=>array('create')),	
+);
+$this->bolmenu2=true;
+$this->nombreCliente=$model->razon_social;
+$this->menu2=array(
 	array('label'=>'Ver Cliente', 'url'=>array('view', 'id'=>$model->id)),
-	
 );
 ?>
 

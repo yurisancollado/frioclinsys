@@ -67,7 +67,7 @@
 <br />
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'username',array('size'=>50,'maxlength'=>50,'disabled'=>'false')); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
@@ -86,3 +86,9 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<script>
+$("#Cliente_rif").change(function() {
+  $("#Cliente_username").val($("#Cliente_rif").val());
+});
+</script>

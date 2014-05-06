@@ -77,6 +77,7 @@ class ClienteController extends Controller
 			if($model->password!=="")
 				$model->password=md5($model->password);
 			$model->created_at=date('Y-m-d H:i:s');
+			$model->username=$model->rif;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -103,6 +104,7 @@ class ClienteController extends Controller
 			$model->attributes=$_POST['Cliente'];
 			if($model->password!=="")
 				$model->password=md5($model->password);
+			$model->username=$model->rif;			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
