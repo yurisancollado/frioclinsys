@@ -1,7 +1,7 @@
 <?php
 /* @var $this ClienteController */
 /* @var $model Cliente */
-
+$this->pageTitle="Crear Cliente";
 $this->breadcrumbs=array(
 	'Clientes'=>array('admin'),
 	'Crear',

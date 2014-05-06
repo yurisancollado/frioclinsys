@@ -31,6 +31,8 @@
 			'items'=>array(
 				array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
+				
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

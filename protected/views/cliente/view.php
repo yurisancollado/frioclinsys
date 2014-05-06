@@ -1,7 +1,7 @@
 <?php
 /* @var $this ClienteController */
 /* @var $model Cliente */
-
+$this->pageTitle="Cliente - ".$model->razon_social;
 $this->breadcrumbs=array(
 	'Clientes'=>array('admin'),
 	$model->razon_social,
@@ -20,6 +20,16 @@ $this->nombreCliente=$model->razon_social;
 $this->menu2=array(
 	array('label'=>'Modificar', 'url'=>array('update', 'id'=>$model->id)),
 	$accionActivo,	
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Facturas', 'url'=>array('facturas/listafactura','cliente'=>$model->id)),
+	array('label'=>'Crear Factura', 'url'=>array('facturas/create','cliente'=>$model->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Proyectos', 'url'=>array('proyectos/listaproyecto','cliente'=>$model->id)),
+	array('label'=>'Crear Proyectos', 'url'=>array('proyectos/create','cliente'=>$model->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Productos', 'url'=>array('productos/listaproducto','cliente'=>$model->id)),
+	array('label'=>'Asociar Proyectos', 'url'=>array('proyectos/create','cliente'=>$model->id)),
+	
 );
 ?>
 

@@ -1,7 +1,7 @@
 <?php
 /* @var $this ClienteController */
 /* @var $model Cliente */
-
+$this->pageTitle="Modificar Cliente - ".$model->razon_social;
 $this->breadcrumbs=array(
 	'Clientes'=>array('admin'),
 	$model->id=>array('view','id'=>$model->id),
