@@ -1,14 +1,14 @@
 <?php
 /* @var $this ProyectoController */
 /* @var $model Proyecto */
-
+$this->pageTitle="Administrar Proyectos";
 $this->breadcrumbs=array(
 	'Proyectos'=>array('admin'),
 	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'Crear Proyecto', 'url'=>array('create')),
+	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -44,12 +44,19 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'Usuario_id',
-		'Cliente_id',
-		'TipoProyecto_id',
+		
+		'clientes.razon_social',
 		'nombre',
-		'estado',
+		'tipoproyectos.nombre',
+		'porcentaje',
+		 array(            
+        'name'=>'fecha_inicio',
+        'value'=>'date("d-m-Y", strtotime($data->fecha_inicio))',
+    	),
+    	 array(            
+        'name'=>'fecha_fin',
+        'value'=>'date("d-m-Y", strtotime($data->fecha_fin))',
+    	),
 		/*
 		'porcentaje',
 		'descripcion',

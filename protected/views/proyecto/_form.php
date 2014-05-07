@@ -13,15 +13,32 @@
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
+	'method'=>'post',	
+    'htmlOptions'=>array(
+        'enctype'=>'multipart/form-data'
+		),
 	'enableAjaxValidation'=>true,
 	'enableClientValidation'=>false,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,)
-)); ?>
+		
+));
+if(isset($_GET['cliente'])){
+	$cliente=Cliente::model()->findByPk($_GET['cliente']);
+	$id_cliente=$_GET['cliente'];
+}
+else{
+	$cliente=Cliente::model()->findByPk($model->Cliente_id);
+	$id_cliente=$model->Cliente_id;
+} ?>
 
 	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
-
+	<div class="row">
+		<?php echo $form->labelEx($model,'Cliente_id'); ?>
+		<?php echo $form->hiddenField($model, 'Cliente_id',array('value'=>$id_cliente)); ?>
+		<?php echo "<input type='text' disabled='disabled' value='".$cliente->razon_social."'/>"; ?>
+	</div>
 
 	
 	<div class="row">

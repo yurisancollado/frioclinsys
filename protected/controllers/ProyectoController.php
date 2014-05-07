@@ -74,6 +74,7 @@ class ProyectoController extends Controller
 		if(isset($_POST['Proyecto']))
 		{
 			$model->attributes=$_POST['Proyecto'];
+			$model->Usuario_id=Yii::app()->user->id; 
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

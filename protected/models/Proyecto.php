@@ -51,6 +51,9 @@ class Proyecto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+		'clientes' => array(self::BELONGS_TO, 'Cliente', 'Cliente_id'), 
+		'usuarios' => array(self::BELONGS_TO, 'Usuario', 'Usuario_id'),
+		'tipoproyectos' => array(self::BELONGS_TO, 'Tipoproyecto', 'TipoProyecto_id'),
 		);
 	}
 

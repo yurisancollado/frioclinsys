@@ -15,7 +15,17 @@ $this->menu=array(
 $this->bolmenu2=true;
 $this->nombreCliente=$model->razon_social;
 $this->menu2=array(
-	array('label'=>'Ver Cliente', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Ver', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Facturas', 'url'=>array('facturas/listafactura','cliente'=>$model->id)),
+	array('label'=>'Crear Factura', 'url'=>array('facturas/create','cliente'=>$model->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Proyectos', 'url'=>array('proyecto/listaproyecto','cliente'=>$model->id)),
+	array('label'=>'Crear Proyectos', 'url'=>array('proyecto/create','cliente'=>$model->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Productos', 'url'=>array('productos/listaproducto','cliente'=>$model->id)),
+	array('label'=>'Asociar Proyectos', 'url'=>array('proyectos/create','cliente'=>$model->id)),
+	
 );
 ?>
 
