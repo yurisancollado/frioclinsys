@@ -1,14 +1,14 @@
 <?php
-/* @var $this ClienteController */
-/* @var $model Cliente */
-$this->pageTitle="Administraar Cliente";
+/* @var $this ProductoController */
+/* @var $model Producto */
+
 $this->breadcrumbs=array(
-	'Clientes'=>array('admin'),
+	'Productos'=>array('admin'),
 	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'Crear Cliente', 'url'=>array('create')),
+	array('label'=>'Crear Producto', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -17,7 +17,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#cliente-grid').yiiGridView('update', {
+	$('#producto-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -25,7 +25,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Administar Clientes</h1>
+<h1>Administar Productos</h1>
 
 <p>
 Puede escribir un operador de comparación  (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -40,28 +40,19 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'cliente-grid',
+	'id'=>'producto-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'codigo',
-		'razon_social',
-		'rif',				
-		'direccion',
-		array(
-		'name'=>'estado',
-		'header'=>'Estado',
-		'value'=>'$data->Estado',
-		'filter'=>Cliente::model()->getListaEstado(),
-		),
+		'id',
+		'nombre',
+		'modelo',
+		'marca.nombre',
+		'tipo.nombre',
 		/*
-		'telefono',
-		'representante',
+		'especificacion',
+		'costo',
 		'estado',
-		'username',
-		'password',
-		'created_at',
-		'last_login',
 		*/
 		array(
 			'class'=>'CButtonColumn',

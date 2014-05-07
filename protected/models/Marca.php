@@ -5,8 +5,11 @@
  *
  * The followings are the available columns in table 'marca':
  * @property string $id
- * @property string $Nombre
+ * @property string $nombre
  * @property string $estado
+ * @property string $binaryFile
+ * @property string $fileType
+ * @property string $fileName
  */
 class Marca extends CActiveRecord
 {
@@ -26,12 +29,13 @@ class Marca extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Nombre', 'required'),
-			array('Nombre', 'length', 'max'=>100),
+			array('nombre', 'required'),
+			array('nombre, fileType, fileName', 'length', 'max'=>100),
 			array('estado', 'length', 'max'=>10),
+			array('binaryFile', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, Nombre, estado', 'safe', 'on'=>'search'),
+			array('id, nombre, estado, binaryFile, fileType, fileName', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,8 +57,11 @@ class Marca extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'Nombre' => 'Nombre',
+			'nombre' => 'Nombre Marca',
 			'estado' => 'Estado',
+			'binaryFile' => 'Binary File',
+			'fileType' => 'File Type',
+			'fileName' => 'File Name',
 		);
 	}
 
@@ -77,8 +84,11 @@ class Marca extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('Nombre',$this->Nombre,true);
+		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('estado',$this->estado,true);
+		$criteria->compare('binaryFile',$this->binaryFile,true);
+		$criteria->compare('fileType',$this->fileType,true);
+		$criteria->compare('fileName',$this->fileName,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

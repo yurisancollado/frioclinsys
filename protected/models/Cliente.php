@@ -17,7 +17,7 @@
  * @property string $password
  * @property string $created_at
  * @property string $last_login
- */
+ */ 
 class Cliente extends CActiveRecord
 {
 	/**
@@ -63,6 +63,7 @@ class Cliente extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'facturas' => array(self::HAS_MANY, 'Facturas', 'cliente_id'),
+			
 		);
 	}
 
