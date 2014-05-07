@@ -4,7 +4,7 @@
 $this->pageTitle="Proyecto - ".$model->nombre;
 $this->breadcrumbs=array(
 	'Proyectos'=>array('admin'),
-	$model->id,
+	$model->nombre,
 );
 
 $this->menu=array(
@@ -28,6 +28,10 @@ $this->menu2=array(
 	array('label'=>'Crear Proyecto', 'url'=>array('create','cliente'=>$cliente->id)),
 	array('label'=>'Modificar Proyecto', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Proyecto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'<hr>'),
+	array('label'=>'Ver Documentos', 'url'=>array('viewDocumentos', 'id'=>$model->id)),
+	array('label'=>'Ver Imagenes', 'url'=>array('viewImagen', 'id'=>$model->id)),
+	array('label'=>'Subir Archivo', 'url'=>array('subirArchivos', 'id'=>$model->id)),
 	
 	array('label'=>'<hr>'),
 	array('label'=>'Listar Facturas', 'url'=>array('facturas/listafactura','cliente'=>$cliente->id)),
@@ -39,18 +43,24 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Proyecto #<?php echo $model->id; ?></h1>
+<h1>Proyecto: <?php echo $model->nombre; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'clientes.razon_social',
-		'tipoproyectos.nombre',
-		'nombre',
-		'estado',
+		'nombre',		
+		'tipoproyectos.nombre',		
+		'Estado',
 		'porcentaje',
 		'descripcion',
-		'fecha_inicio',
-		'fecha_fin',
+		array(
+       	'name'=>'fecha_inicio',
+       	'value'=>Yii::app()->dateFormatter->format('dd-MM-yyyy',$model->fecha_inicio) ,  
+     	),
+     	array(
+       	'name'=>'fecha_fin',
+       	'value'=>Yii::app()->dateFormatter->format('dd-MM-yyyy',$model->fecha_fin) ,  
+     	),
 	),
 )); ?>

@@ -52,7 +52,7 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 		'name'=>'estado',
 		'header'=>'Estado',
 		'value'=>'$data->Estado',
-		'filter'=>Cliente::getListaEstado(),
+		'filter'=>Cliente::model()->getListaEstado(),
 		),
 		/*
 		'telefono',
