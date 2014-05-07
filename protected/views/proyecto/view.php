@@ -29,9 +29,9 @@ $this->menu2=array(
 	array('label'=>'Modificar Proyecto', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Proyecto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'<hr>'),
-	array('label'=>'Ver Documentos', 'url'=>array('viewDocumentos', 'id'=>$model->id)),
-	array('label'=>'Ver Imagenes', 'url'=>array('viewImagen', 'id'=>$model->id)),
-	array('label'=>'Subir Archivo', 'url'=>array('subirArchivos', 'id'=>$model->id)),
+	array('label'=>'Documentos', 'url'=>array('documentos', 'id'=>$model->id)),
+	array('label'=>'Imagenes', 'url'=>array('imagenes', 'id'=>$model->id)),
+
 	
 	array('label'=>'<hr>'),
 	array('label'=>'Listar Facturas', 'url'=>array('facturas/listafactura','cliente'=>$cliente->id)),
