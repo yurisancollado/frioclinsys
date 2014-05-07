@@ -1,10 +1,10 @@
 body
 {
-	margin: 0;
-	padding: 0;
-	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	position: relative;
+	min-width: 960px;
+    background: url(../images/bg_body.png) 0 0 repeat #a4a2a1;
+    color: #83868a;
+    font: 13px/18px 'Ubuntu', sans-serif;
 }
 
 #page

@@ -11,53 +11,146 @@
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
 	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
+<body class="page1" id="top">
+        <div class="bg1">
+<!--==============================header=================================-->
 
-<body>
+<header>
+	<div>
+		<div class="container_12">
+			<div class="grid_12">
+				<div class="links">
 
-<div class="container" id="page">
+					<h1><a href="index.php"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="INVERSIONES FRIOCLIN C.A"> </a></h1>
+				</div>
+				<div class="menu_block ">
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+					<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+						<ul class="sf-menu sf-js-enabled sf-arrows">
+							
+						<?php if(!Yii::app()->user->isGuest){?>
+						<li class="current">									
+							<a href="<?php echo Yii::app()->request->baseUrl; ?>">Home</a>
+						</li>
+						<li>
+							<a href="<?php echo Yii::app()->request->baseUrl; ?>/usuario/admin">Usuarios</a>
+						</li>
+						<li>
+							<a href="<?php echo Yii::app()->request->baseUrl; ?>/cliente/admin">Clientes</a>
+						</li>
+						<li>
+							<a href="<?php echo Yii::app()->request->baseUrl; ?>/facturas/admin">Facturas</a>
+						</li>
+						<li>
+							<a href="<?php echo Yii::app()->request->baseUrl; ?>/proyecto/admin">Proyectos</a>
+						</li>
+						<li>
+							<a href="<?php echo Yii::app()->request->baseUrl; ?>/producto/admin">Productos</a>
+						</li>
+						<?php } ?>
+						
+						<li>
+							<?php if(!Yii::app()->user->isGuest){?>
+							<a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout">Logout</a>
+							<?php }else{ ?>
+								<a href="<?php echo Yii::app()->request->baseUrl; ?>/site/login">Login</a>
+							<?php } ?>
+						</li>
+						</ul>
+					</nav>
 
-	<div id="mainmenu">
-		<?php 
-		$this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Productos', 'url'=>array('/productos/admin'),'visible'=>!Yii::app()->user->isGuest),
-				
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
+					<div class="clear"></div>
+
+				</div>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</header>
+
+<!--==============================Content=================================-->
+<div class="content">
+                <div class="container_12">
+                                      
+                </div>
+            </div>
+        </div>
+        <div class="bottom_block1">
+            <div class="container_12">
+              <?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
 
 	<?php echo $content; ?>
+            </div>
+        </div>
+	
+<!--==============================footer=================================-->
+<footer>
+	<div class="container_12">
+		<div class="grid_6 maxheight1" style="height: 259px;">
+			<div class="box_inner">
+				<h4></h4>
 
-	<div class="clear"></div>
+				<nav>
+					<ul>
+						<?php if(!Yii::app()->user->isGuest){?>
+						<li>
+							<a href="empresa.php">Usuarios</a>
+						</li>
+						<li>
+							<a href="servicios.php">Clientes</a>
+						</li>
+						<li>
+							<a href="servicios.php">Facturas</a>
+						</li>
+						<li>
+							<a href="servicios.php">Proyectos</a>
+						</li>
+						<li>
+							<a href="servicios.php">Productos</a>
+						</li>
+						<?php }?>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="grid_3 maxheight1 ver" style="height: 259px;">
+			<div class="box_inner">
+				<h4>Siguenos</h4>
+				<div class="socials">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
+			</div>
+		</div>
+		<div class="grid_3 maxheight1 ver" style="height: 259px;">
+			<div class="box_inner">
+				<h4>copyright</h4>
+				<div class="copy">
+					<small>Frioclin.com</small>
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
+					© <span id="copyright-year">2014</span> | <a href="">RIF: J-40378560-0</a><!--{%FOOTER_LINK} --><div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+        
 
-</div><!-- page -->
+
 
 </body>
+	
 </html>

@@ -26,6 +26,7 @@ class UserIdentity extends CUserIdentity
 		else
 			if(is_null($user))
 				$user=Cliente::model()->find('LOWER(username)=?',array(strtolower($this->username)));		
+		if(!is_null($user))
 		if(!$user->validatePassword($this->password))
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else if(!$user->estado===0){			
@@ -33,8 +34,7 @@ class UserIdentity extends CUserIdentity
 		}else{
 			$this->_id=$user->id;	
 			$this->username=$user->username;		
-			$this->errorCode=self::ERROR_NONE;
-			
+			$this->errorCode=self::ERROR_NONE;			
 			$this->setState('last_login',$user->last_login);
 			if($clie!==null){
 				$this->setState('tipoUsuario','cliente');
@@ -45,7 +45,7 @@ class UserIdentity extends CUserIdentity
 				$this->setState('tipoUsuario','usuario');				
 				$this->setState('nombre',$user->nombre.' '.$user->apellido);
 				$sql = "update usuario set last_login = now() where username='$user->username'";								
-			}	$sql = "update usuario set last_login = now() where username='$user->username'";
+			}	
 			$connection = Yii::app() -> db;
 			$command = $connection -> createCommand($sql);
 			$command -> execute();
