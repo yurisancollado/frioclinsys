@@ -194,10 +194,10 @@ class FacturasController extends Controller
 		}
 	}
 	public function actionloadImage($id) {
-	$model = $this -> loadModel($id);
-	header('Content-Type: ' . $model -> fileType);
-	print $model -> binaryFile;
+		$model = $this -> loadModel($id);
+		header('Content-Type: ' . $model -> fileType);
+		print $model -> binaryFile;
 
-}
+	}
 	
 }

@@ -56,7 +56,8 @@ class Proyecto extends CActiveRecord
 		'clientes' => array(self::BELONGS_TO, 'Cliente', 'Cliente_id'), 
 		'usuarios' => array(self::BELONGS_TO, 'Usuario', 'Usuario_id'),
 		'tipoproyectos' => array(self::BELONGS_TO, 'Tipoproyecto', 'TipoProyecto_id'),
-		'imagenes' => array(self::HAS_MANY, 'Imagenproyecto', 'Proyectos_id'),
+		'imagenes' => array(self::HAS_MANY, 'Imagenproyecto', 'Proyectos_id', 'condition'=>'tipo=1'),
+		'documentos' => array(self::HAS_MANY, 'Imagenproyecto', 'Proyectos_id', 'condition'=>'tipo=2'),
 		
 		);
 	}
@@ -73,7 +74,7 @@ class Proyecto extends CActiveRecord
 			'TipoProyecto_id' => 'Tipo Proyecto',
 			'nombre' => 'Nombre',
 			'estado' => 'Estado',
-			'porcentaje' => 'Porcentaje',
+			'porcentaje' => 'Progreso (%)',
 			'descripcion' => 'Descripcion',
 			'fecha_inicio' => 'Fecha Inicio',
 			'fecha_fin' => 'Fecha Fin',
@@ -133,5 +134,6 @@ class Proyecto extends CActiveRecord
 		if($this->porcentaje>0 &&$this->porcentaje<100 )
 			return "Activo";		
 	}
+	
 
 }

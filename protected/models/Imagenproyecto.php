@@ -47,6 +47,7 @@ class Imagenproyecto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'proyecto' => array(self::BELONGS_TO, 'Proyecto', 'Proyecto_id'),
 		);
 	}
 
@@ -58,7 +59,7 @@ class Imagenproyecto extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'Proyectos_id' => 'Proyectos',
-			'binaryFile' => 'Binary File',
+			'binaryFile' => 'Seleccione un Archivo',
 			'fileType' => 'File Type',
 			'fileName' => 'File Name',
 			'tipo' => 'Tipo',
@@ -106,5 +107,20 @@ class Imagenproyecto extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	public function getImagen($width = 100){
+		return html_entity_decode(CHtml::image(Yii::app()->controller->createUrl('proyecto/loadImage', array('id'=>$this->id))
+																				,'alt'
+																				,array('width'=>$width)
+																				));
+	}
+	public function getDocumento(){
+		$qry = "SELECT tipo, contenido FROM archivos WHERE id=$id";
+		 $res = mysql_query($qry);
+		 $tipo = mysql_result($res, 0, "tipo");
+		 $contenido = mysql_result($res, 0, "contenido");
+		
+		 header("Content-type: $tipo");
+		 print $contenido;
 	}
 }

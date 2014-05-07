@@ -36,7 +36,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','documentos','imagenes','loadImage'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -174,5 +174,68 @@ class ProyectoController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	public function actionDocumentos($id)
+	{
+		$proyecto=$this->loadModel($id);
+		$model=new Imagenproyecto;
+		$model->Proyectos_id=$id;
+		
+		if (!empty($_FILES['Imagenproyecto']['tmp_name']['binaryFile'])) {
+				$file = CUploadedFile::getInstance($model, 'binaryFile');
+				$model -> fileName = $file -> name;
+				$model -> fileType = $file -> type;
+				$fp = fopen($file -> tempName, 'r');
+				$content = fread($fp, filesize($file -> tempName));
+				fclose($fp);
+				$model -> binaryFile = $content;
+				$model->tipo="1";
+				
+			}
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->Proyectos_id));
+		
+	
+			
+		$this->render('documentos',array(
+			'proyecto'=>$proyecto,
+			'model'=>$model,
+		));
+	}
+	
+	public function actionImagenes($id)
+	{
+		$proyecto=$this->loadModel($id);
+		$model=new Imagenproyecto;
+		$model->Proyectos_id=$id;
+		
+		if (!empty($_FILES['Imagenproyecto']['tmp_name']['binaryFile'])) {
+				$file = CUploadedFile::getInstance($model, 'binaryFile');
+				$model -> fileName = $file -> name;
+				$model -> fileType = $file -> type;
+				$fp = fopen($file -> tempName, 'r');
+				$content = fread($fp, filesize($file -> tempName));
+				fclose($fp);
+				$model -> binaryFile = $content;
+				$model->tipo="2";
+				
+			}
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->Proyectos_id));
+		
+	
+			
+		$this->render('imagenes',array(
+			'proyecto'=>$proyecto,
+			'model'=>$model,
+		));
+	}
+	
+	public function actionloadImage($id) {
+		$model = Imagenproyecto::model()->findByPk($id);
+		header('Content-Type: ' . $model -> fileType);
+		print $model -> binaryFile;
+
 	}
 }
