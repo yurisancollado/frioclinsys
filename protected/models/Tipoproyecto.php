@@ -53,7 +53,7 @@ class Tipoproyecto extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nombre' => 'Nombre',
+			'nombre' => 'Tipo Proyecto',
 			'estado' => 'Estado',
 		);
 	}

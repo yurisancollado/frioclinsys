@@ -20,6 +20,8 @@ class Proyecto extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	
+	 	public static $estado = array('Pendiente' => 'Pendiente', 'Finalizado' => 'Finalizado','Activo' => 'Activo');
 	public function tableName()
 	{
 		return 'proyectos';
@@ -54,6 +56,8 @@ class Proyecto extends CActiveRecord
 		'clientes' => array(self::BELONGS_TO, 'Cliente', 'Cliente_id'), 
 		'usuarios' => array(self::BELONGS_TO, 'Usuario', 'Usuario_id'),
 		'tipoproyectos' => array(self::BELONGS_TO, 'Tipoproyecto', 'TipoProyecto_id'),
+		'imagenes' => array(self::HAS_MANY, 'Imagenproyecto', 'Proyectos_id'),
+		
 		);
 	}
 
@@ -120,4 +124,14 @@ class Proyecto extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	public function getEstado(){
+		if($this->porcentaje==0)
+			return "Pendiente";
+		if($this->porcentaje==100)
+			return "Finalizado";
+		if($this->porcentaje>0 &&$this->porcentaje<100 )
+			return "Activo";		
+	}
+
 }
