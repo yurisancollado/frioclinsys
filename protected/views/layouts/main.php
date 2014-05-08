@@ -1,4 +1,5 @@
 <?php /* @var $this Controller */ 
+session_start();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -27,42 +28,36 @@
 			<div class="grid_12">
 				<div class="links">
 
-					<h1><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/index"> <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/logo.png" alt="INVERSIONES FRIOCLIN C.A"> </a></h1>
+					<h1><a href="index.php"> <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/logo.png" alt="INVERSIONES FRIOCLIN C.A"> </a></h1>
 				</div>
-			
-	<div id="mainmenu">
-<?php #Menu General
-		if(Yii::app()->user->isGuest){
-			$this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Empresa', 'url'=>array('/site/empresa')),
-				array('label'=>'Servicios', 'url'=>array('/site/servicio')),
-				array('label'=>'Contacto', 'url'=>array('/site/contacto')),
-				array('label'=>'Login', 'url'=>array('/site/login')),
-				
-			),
-		));			
-		}
-	# Menu Administrador
-		else{
-		$this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Productos', 'url'=>array('/producto/admin'),'visible'=>!Yii::app()->user->isGuest),
-				
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		));
-		}
-	# Menu Cliente
- ?>
-	</div>		
-			<div class="clear"></div>
+				<div class="menu_block ">
+
+					<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+						<ul class="sf-menu sf-js-enabled sf-arrows">
+							<li <?php if($_SESSION['pag']=="index"){ ?> class='current'  <?php } ?> >
+								<a href="<?php echo Yii::app()->request->baseUrl; ?>/site/index">Home</a>
+							</li>
+							<li <?php if($_SESSION['pag']=="empresa"){ ?> class='current'  <?php } ?>>
+								<a href="<?php echo Yii::app()->request->baseUrl; ?>/site/empresa" class="sf-with-ul">Empresa</a>
+							</li>
+							<li <?php if($_SESSION['pag']=="servicios"){ ?> class='current'  <?php } ?>>
+								<a href="servicios.php">Servicios</a>
+							</li>
+							<!-- <li><a href="noticias.html">Noticias</a></li> -->
+							<li >
+								<a href="contacto.php">Contacto</a>
+							</li>
+							<li>
+								<a href="#" onclick="alert('Esta sección se encuentra en desarrollo para ofrecerle un mejor servicio')">Intranet</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="clear"></div>
+
+				</div>
+
+				<div class="clear"></div>
 			</div>
 		</div>
 	</div>
@@ -77,9 +72,10 @@
 <br/>
 </div>
  <!--==============================Contenido=================================-->
-
+<?php if($pag="empresa") 
+echo $_SESSION['pag'];?>
 <?php
- if(Yii::app()->user->isGuest){
+ if($pag="empresa"){
 	echo $content; ?>
 <?php }else{?>
 <div class="bottom_block1">
