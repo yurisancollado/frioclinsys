@@ -43,3 +43,15 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<div>
+	
+	<?php foreach($proyecto->documentos as $documento){
+	
+		echo CHtml::link($documento->fileName,array('descarga','id'=>$documento->id))."<br/>"; 
+		
+	}
+	
+	?>
+	
+	
+</div>

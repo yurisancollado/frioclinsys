@@ -36,7 +36,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','documentos','imagenes','loadImage'),
+				'actions'=>array('create','update','documentos','imagenes','loadImage','descarga'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -184,10 +184,11 @@ class ProyectoController extends Controller
 		
 		if (!empty($_FILES['Imagenproyecto']['tmp_name']['binaryFile'])) {
 				$file = CUploadedFile::getInstance($model, 'binaryFile');
+		
 				$model -> fileName = $file -> name;
 				$model -> fileType = $file -> type;
 				$fp = fopen($file -> tempName, 'r');
-				$content = fread($fp, filesize($file -> tempName));
+				$content = fread($fp, $file->size);
 				fclose($fp);
 				$model -> binaryFile = $content;
 				$model->tipo="1";
@@ -237,5 +238,9 @@ class ProyectoController extends Controller
 		header('Content-Type: ' . $model -> fileType);
 		print $model -> binaryFile;
 
+	}
+	public function actionDescarga($id){
+		$file=Imagenproyecto::model()->findbyPk($id);
+		$file->documento;
 	}
 }

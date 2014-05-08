@@ -56,8 +56,8 @@ class Proyecto extends CActiveRecord
 		'clientes' => array(self::BELONGS_TO, 'Cliente', 'Cliente_id'), 
 		'usuarios' => array(self::BELONGS_TO, 'Usuario', 'Usuario_id'),
 		'tipoproyectos' => array(self::BELONGS_TO, 'Tipoproyecto', 'TipoProyecto_id'),
-		'imagenes' => array(self::HAS_MANY, 'Imagenproyecto', 'Proyectos_id', 'condition'=>'tipo=1'),
-		'documentos' => array(self::HAS_MANY, 'Imagenproyecto', 'Proyectos_id', 'condition'=>'tipo=2'),
+		'imagenes' => array(self::HAS_MANY, 'Imagenproyecto', 'Proyectos_id', 'condition'=>'tipo=2'),
+		'documentos' => array(self::HAS_MANY, 'Imagenproyecto', 'Proyectos_id', 'condition'=>'tipo=1'),
 		
 		);
 	}
