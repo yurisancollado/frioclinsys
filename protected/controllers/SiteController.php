@@ -29,6 +29,7 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+		$_SESSION['pag']="index";
 		$this->render('index');
 	}
 
@@ -105,5 +106,11 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+	public function actionEmpresa()
+	{
+			
+		$_SESSION['pag']="empresa";
+		$this->render('empresa');
 	}
 }
