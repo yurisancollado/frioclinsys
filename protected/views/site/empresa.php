@@ -1,7 +1,5 @@
-
-
-	<body class="page1" id="top">
-		<div class="bg1">
+<body class="page1" id="top">
+	<div class="bg1">
 
 <!--==============================Content=================================-->
 			<div class="content">

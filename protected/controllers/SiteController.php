@@ -108,9 +108,15 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 	public function actionEmpresa()
-	{
-			
-		$_SESSION['pag']="empresa";
+	{			
 		$this->render('empresa');
+	}
+	public function actionServicio()
+	{			
+		$this->render('servicios');
+	}
+	public function actionContacto()
+	{			
+		$this->render('contacto');
 	}
 }
