@@ -33,7 +33,7 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Cliente <?php echo $model->razon_social; ?></h1>
+<h5>Cliente <?php echo $model->razon_social; ?></h5>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

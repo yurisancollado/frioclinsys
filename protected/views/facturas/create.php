@@ -30,6 +30,6 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Crear Facturas</h1>
+<h5>Crear Facturas</h5>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

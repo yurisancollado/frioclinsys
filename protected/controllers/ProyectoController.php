@@ -36,7 +36,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','documentos','imagenes','loadImage'),
+				'actions'=>array('create','update','documentos','imagenes','loadImage','listaproyecto'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -236,6 +236,16 @@ class ProyectoController extends Controller
 		$model = Imagenproyecto::model()->findByPk($id);
 		header('Content-Type: ' . $model -> fileType);
 		print $model -> binaryFile;
+
+	}
+
+public function actionListaproyecto()
+	{
+	
+		$dataProvider = Proyecto::model() -> clienteProyecto($_GET['cliente']);
+		$this -> render('listaproyecto',
+		array('dataProvider' => $dataProvider, 
+		'model' => new Proyecto, ));
 
 	}
 }

@@ -24,7 +24,7 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Usuario: <?php echo $model->nombre.' '.$model->apellido; ?></h1>
+<h5>Usuario: <?php echo $model->nombre.' '.$model->apellido; ?></h5>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

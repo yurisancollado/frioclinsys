@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Productos'=>array('admin'),
-	$model->id=>array('view','id'=>$model->id),
+	$model->nombre=>array('view','id'=>$model->id),
 	'Modificar',
 );
 
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Modificar Producto <?php echo $model->id; ?></h1>
+<h5>Modificar Producto <?php echo $model->nombre; ?></h5>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -8378,3 +8378,735 @@ Stack trace:
 REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
 HTTP_REFERER=http://localhost/frioclinsys/site/contacto
 ---
+2014/05/08 15:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ver" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('ver')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('ver')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('cliente/ver')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/cliente/ver
+HTTP_REFERER=http://localhost/frioclinsys/site/login
+---
+2014/05/08 15:09:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ver" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('ver')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('ver')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('cliente/ver')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/cliente/ver
+HTTP_REFERER=http://localhost/frioclinsys/site/login
+---
+2014/05/08 15:09:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ver" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('ver')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('ver')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('cliente/ver')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/cliente/ver
+HTTP_REFERER=http://localhost/frioclinsys/site/login
+---
+2014/05/08 15:22:03 [error] [php] Use of undefined constant end - assumed 'end' (C:\wamp\www\frioclinsys\protected\views\layouts\main.php:52)
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): UsuarioController->renderFile()
+#1 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): UsuarioController->endWidget()
+#5 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): UsuarioController->endContent()
+#6 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): UsuarioController->renderInternal()
+#8 C:\wamp\www\yii_fw\framework\web\CController.php(784): UsuarioController->renderFile()
+#9 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): UsuarioController->render()
+#10 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#11 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#13 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#16 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii_fw\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#19 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): UsuarioController->run()
+#20 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/usuario/admin
+in C:\wamp\www\frioclinsys\protected\views\layouts\main.php (52)
+in C:\wamp\www\frioclinsys\protected\views\layouts\column2.php (37)
+in C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php (152)
+2014/05/08 15:22:20 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:21 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:22 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:23 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:23 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:23 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:24 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:24 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:24 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:25 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:25 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:25 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 15:22:26 [error] [exception.CException] exception 'CException' with message 'La propiedad "CBreadcrumbs"."		links" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWidgetFactory.php(161): CComponent->__set('??links', Array)
+#1 C:\wamp\www\yii_fw\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'zii.widgets.CBr...', Array)
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CBr...', Array)
+#3 C:\wamp\www\frioclinsys\protected\views\layouts\main.php(51): CBaseController->widget('zii.widgets.CBr...', Array)
+#4 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#5 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#6 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#7 C:\wamp\www\yii_fw\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\wamp\www\yii_fw\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\wamp\www\yii_fw\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii_fw\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\frioclinsys\protected\views\layouts\column2.php(37): CBaseController->endContent()
+#12 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#13 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#15 C:\wamp\www\frioclinsys\protected\controllers\UsuarioController.php(152): CController->render('admin', Array)
+#16 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): UsuarioController->actionAdmin()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('admin')
+#26 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#27 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/frioclinsys/usuario/admin
+HTTP_REFERER=http://localhost/frioclinsys/usuario/1
+---
+2014/05/08 19:45:00 [error] [php] Undefined index: cliente (C:\wamp\www\frioclinsys\protected\views\proyecto\create.php:16)
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(869): ProyectoController->renderFile()
+#1 C:\wamp\www\yii_fw\framework\web\CController.php(782): ProyectoController->renderPartial()
+#2 C:\wamp\www\frioclinsys\protected\controllers\ProyectoController.php(84): ProyectoController->render()
+#3 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): ProyectoController->actionCreate()
+#4 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#6 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#9 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii_fw\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#12 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): ProyectoController->run()
+#13 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/proyecto/create
+in C:\wamp\www\frioclinsys\protected\views\proyecto\create.php (16)
+in C:\wamp\www\frioclinsys\protected\controllers\ProyectoController.php (84)
+in C:\wamp\www\frioclinsys\index.php (13)
+2014/05/08 19:47:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "listaproyecto" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('listaproyecto')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/create?cliente=1
+---
+2014/05/08 19:48:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "listaproyecto" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('listaproyecto')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/cliente/1
+---
+2014/05/08 20:29:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "listaproyecto" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('listaproyecto')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/facturas/listafactura?cliente=1
+---
+2014/05/08 21:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "listaproyecto" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('listaproyecto')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/08 21:53:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "listaproyecto" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('listaproyecto')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/08 21:55:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\yii_fw\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#8 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#9 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/08 21:55:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\yii_fw\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#8 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#9 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/08 21:55:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\yii_fw\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#8 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#9 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/08 21:56:03 [error] [exception.CException] exception 'CException' with message 'Proyecto y sus behaviors no tienen un método o closure llamado "clienteProyecto".' in C:\wamp\www\yii_fw\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\db\ar\CActiveRecord.php(227): CComponent->__call('clienteProyecto', Array)
+#1 C:\wamp\www\frioclinsys\protected\controllers\ProyectoController.php(245): CActiveRecord->__call('clienteProyecto', Array)
+#2 C:\wamp\www\frioclinsys\protected\controllers\ProyectoController.php(245): Proyecto->clienteProyecto('1')
+#3 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): ProyectoController->actionListaproyecto()
+#4 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('listaproyecto')
+#13 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/listap...')
+#14 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/frioclinsys/proyecto/listaproyecto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/08 22:25:38 [error] [exception.CException] exception 'CException' with message 'La propiedad "Imagenproyecto"."nombre" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\wamp\www\frioclinsys\protected\views\proyecto\documentos.php(7): CActiveRecord->__get('nombre')
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#3 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#4 C:\wamp\www\yii_fw\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#5 C:\wamp\www\yii_fw\framework\web\CController.php(782): CController->renderPartial('documentos', Array, true)
+#6 C:\wamp\www\frioclinsys\protected\controllers\ProyectoController.php(204): CController->render('documentos', Array)
+#7 [internal function]: ProyectoController->actionDocumentos('1')
+#8 C:\wamp\www\yii_fw\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProyectoController), Array)
+#9 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProyectoController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('documentos')
+#19 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/docume...')
+#20 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/frioclinsys/proyecto/documentos/1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/08 22:28:52 [error] [exception.CException] exception 'CException' with message 'La propiedad "Imagenproyecto"."Cliente_id" no se encuentra definida.' in C:\wamp\www\yii_fw\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Cliente_id')
+#1 C:\wamp\www\frioclinsys\protected\views\proyecto\documentos.php(5): CActiveRecord->__get('Cliente_id')
+#2 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require('C:\wamp\www\fri...')
+#3 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\fri...', Array, true)
+#4 C:\wamp\www\yii_fw\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\fri...', Array, true)
+#5 C:\wamp\www\yii_fw\framework\web\CController.php(782): CController->renderPartial('documentos', Array, true)
+#6 C:\wamp\www\frioclinsys\protected\controllers\ProyectoController.php(204): CController->render('documentos', Array)
+#7 [internal function]: ProyectoController->actionDocumentos('1')
+#8 C:\wamp\www\yii_fw\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProyectoController), Array)
+#9 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProyectoController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('documentos')
+#19 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/docume...')
+#20 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/frioclinsys/proyecto/documentos/1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/09 01:30:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "productos/listaproducto"' in C:\wamp\www\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('productos/lista...')
+#1 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/productos/listaproducto?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/facturas/create?cliente=1
+---

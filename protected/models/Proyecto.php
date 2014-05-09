@@ -134,6 +134,10 @@ class Proyecto extends CActiveRecord
 		if($this->porcentaje>0 &&$this->porcentaje<100 )
 			return "Activo";		
 	}
-	
+	public function clienteProyecto($id = NULL) {
+		$criteria = new CDbCriteria;
+		$criteria -> addCondition('Cliente_id=' . $id);
+		return new CActiveDataProvider($this, array('criteria' => $criteria, ));
+	}
 
 }

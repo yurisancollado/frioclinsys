@@ -41,11 +41,9 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'proyecto-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$dataProvider,
 	'filter'=>$model,
 	'columns'=>array(
-		
-		'clientes.razon_social',
 		'nombre',
 		'tipoproyectos.nombre',
 		'porcentaje',

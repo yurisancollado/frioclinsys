@@ -33,7 +33,7 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Factura #<?php echo $model->numero; ?></h1>
+<h5>Factura #<?php echo $model->numero; ?></h5>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

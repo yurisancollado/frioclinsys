@@ -7,12 +7,7 @@ $this->breadcrumbs=array(
 	$model->nombre,
 );
 
-$this->menu=array(
-	array('label'=>'Administrar Proyecto', 'url'=>array('admin')),
-	array('label'=>'Crear Proyecto', 'url'=>array('create')),
-	array('label'=>'Modificar Proyecto', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Eliminar Proyecto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-);
+
 $this->menu=array(
 	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
 	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
@@ -43,7 +38,7 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Proyecto: <?php echo $model->nombre; ?></h1>
+<h5>Proyecto: <?php echo $model->nombre; ?></h5>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

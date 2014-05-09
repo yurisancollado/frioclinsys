@@ -150,13 +150,14 @@ div.view
 
 div.breadcrumbs
 {
-	font-size: 0.9em;
-	padding: 5px 20px;
+	font-size: 1.1em;
+	padding: 8px 0px 5px 0px;
 }
 
 div.breadcrumbs span
 {
 	font-weight: bold;
+	color: #E77817;
 }
 
 div.search-form

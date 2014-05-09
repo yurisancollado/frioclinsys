@@ -31,6 +31,6 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Modificar Facturas <?php echo $model->numero; ?></h1>
+<h5>Modificar Facturas <?php echo $model->numero; ?></h5>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

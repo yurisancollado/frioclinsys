@@ -29,6 +29,6 @@ $this->menu2=array(
 );
 ?>
 
-<h1>Modificar Cliente <?php echo $model->id; ?></h1>
+<h5>Modificar <?php echo $model->razon_social; ?></h5>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

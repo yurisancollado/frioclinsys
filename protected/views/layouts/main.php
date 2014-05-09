@@ -44,24 +44,37 @@
 		));			
 		}
 	# Menu Administrador
-		else{
-
-		$this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Productos', 'url'=>array('/producto/admin'),'visible'=>!Yii::app()->user->isGuest),
-
+		else{ 		
+			
+			if(Yii::app()->user->getState('tipoUsuario')=="usuario"){
+				$this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Productos', 'url'=>array('/producto/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					),		
+				));
+			}else{
+# Menu Cliente				
+				$this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Productos', 'url'=>array('/producto/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					),		
+				));				
+			}
 				
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-
-		));
 		}
-	# Menu Cliente
+	
  ?>
 	</div>		
 			<div class="clear"></div>
@@ -85,11 +98,15 @@
  if(Yii::app()->user->isGuest){
 	echo $content; ?>
 <?php }else{
-# Contenido para logueado	
-?>
+# Contenido para logueado	?>
+
 <div class="bottom_block1">
     <div class="container_12">
-		<?php echo $content; ?>
+		<?php
+		if(isset($this->breadcrumbs))
+			$this->widget('zii.widgets.CBreadcrumbs', array(
+				'links'=>$this->breadcrumbs,	));  
+		echo $content; ?>
     </div>
 </div>
 	
@@ -103,7 +120,8 @@
 			<div class="box_inner">
 				<h4></h4>
 			<div id="footermenu">
-<?php
+<?php #Menu General
+		if(Yii::app()->user->isGuest){
 			$this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
@@ -113,7 +131,36 @@
 				array('label'=>'Login', 'url'=>array('/site/login')),
 				
 			),
-		));		 ?>	
+		));			
+		}
+	# Menu Administrador
+		else{
+			if(Yii::app()->user->getState('tipoUsuario')=="usuario"){
+				$this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Productos', 'url'=>array('/producto/admin'),'visible'=>!Yii::app()->user->isGuest),
+					),		
+				));
+			}else{
+# Menu Cliente				
+				$this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Productos', 'url'=>array('/producto/admin'),'visible'=>!Yii::app()->user->isGuest),
+					),		
+				));				
+			}
+				
+		}
+	
+ ?>
 
 			</div>
 			</div>

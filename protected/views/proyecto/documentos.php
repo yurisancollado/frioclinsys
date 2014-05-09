@@ -2,8 +2,9 @@
 /* @var $this FacturasController */
 /* @var $model Facturas */
 /* @var $form CActiveForm */
-?>
 
+?>
+<h5>Documentos</h5>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(

@@ -3,7 +3,7 @@
 /* @var $model Facturas */
 /* @var $form CActiveForm */
 ?>
-
+<h5>Imagenes</h5>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(

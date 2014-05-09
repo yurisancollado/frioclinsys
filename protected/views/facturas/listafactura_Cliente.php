@@ -1,15 +1,19 @@
 <?php
-/* @var $this ProyectoController */
-/* @var $model Proyecto */
-$this->pageTitle="Administrar Proyectos";
+/* @var $this FacturasController */
+/* @var $model Facturas */
+$cliente=Cliente::model()->findByPk($_GET['cliente']);
+
+$this->pageTitle=$cliente->razon_social." - Facturas";
 $this->breadcrumbs=array(
-	'Proyectos'=>array('admin'),
+	'Facturas'=>array('admin'),
 	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
-);
+	array('label'=>'Listar Facturas', 'url'=>array('admin')),
+	);
+
+
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -17,7 +21,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#proyecto-grid').yiiGridView('update', {
+	$('#facturas-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -25,7 +29,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h5>Administar Proyectos</h5>
+<h5>Administar Facturas</h5>
 
 <p>
 Puede escribir un operador de comparación  (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -40,28 +44,22 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'proyecto-grid',
-	'dataProvider'=>$model->search(),
+	'id'=>'facturas-grid',
+	'dataProvider'=>$dataProvider,
 	'filter'=>$model,
 	'columns'=>array(
-		
-		'clientes.razon_social',
-		'nombre',
-		'tipoproyectos.nombre',
-		'porcentaje',
+		'numero',
 		 array(            
-        'name'=>'fecha_inicio',
-        'value'=>'date("d-m-Y", strtotime($data->fecha_inicio))',
+        'name'=>'fecha',
+        'value'=>'date("d-m-Y", strtotime($data->fecha))',
     	),
-    	 array(            
-        'name'=>'fecha_fin',
-        'value'=>'date("d-m-Y", strtotime($data->fecha_fin))',
-    	),
+			
+		'monto',
 		/*
-		'porcentaje',
-		'descripcion',
-		'fecha_inicio',
-		'fecha_fin',
+		'binaryFile',
+		'fileType',
+		'fileName',
+		'numero',
 		*/
 		array(
 			'class'=>'CButtonColumn',

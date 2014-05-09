@@ -25,7 +25,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Administar Usuarios</h1>
+<h5>Administar Usuarios</h5>
 
 <p>
 Puede escribir un operador de comparación  (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

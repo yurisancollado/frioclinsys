@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Productos'=>array('admin'),
-	$model->id,
+	$model->nombre,
 );
 
 $this->menu=array(
@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Producto #<?php echo $model->id; ?></h1>
+<h5>Producto #<?php echo $model->nombre; ?></h5>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
