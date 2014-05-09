@@ -51,7 +51,7 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 		'name'=>'estado',
 		'header'=>'Estado',
 		'value'=>'$data->Estado',
-		'filter'=>Usuario::getListaEstado(),
+		'filter'=>Usuario::model()->getListaEstado(),
 		),
 		array(
 			'class'=>'CButtonColumn',
