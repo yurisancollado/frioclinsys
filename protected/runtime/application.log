@@ -9233,6 +9233,7 @@ Stack trace:
 REQUEST_URI=/frioclinsys/site/css/form.css
 HTTP_REFERER=http://localhost/frioclinsys/site/contacto
 ---
+<<<<<<< HEAD
 2014/05/11 21:06:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'FrioClin873'@'localhost' (using password: NO)' in /home2/ilfra/public_html/framework/db/CDbConnection.php:382
 Stack trace:
 #0 /home2/ilfra/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
@@ -9465,3 +9466,5 @@ Stack trace:
 REQUEST_URI=/frioclinsys/proyectos/create?cliente=1
 HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
 ---
+=======
+>>>>>>> e6651864ef3a5e15325ec6e5357352cd43af5d6e

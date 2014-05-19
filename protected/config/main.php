@@ -52,8 +52,13 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=ilfra_develop_frioclin',
 			'emulatePrepare' => true,
+<<<<<<< HEAD
 			'username' => 'ilfra_frio',
 			'password' => 'FrioClin873',
+=======
+			'username' => 'root',
+			'password' => '',
+>>>>>>> e6651864ef3a5e15325ec6e5357352cd43af5d6e
 			'charset' => 'utf8',
 		),
 		'coreMessages'=>array(
