@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
-
+	<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
@@ -26,7 +26,7 @@
 			<div class="grid_12">
 				<div class="links">
 
-					<h1><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/index"> <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/logo.png" alt="INVERSIONES FRIOCLIN C.A"> </a></h1>
+					<h1><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/index"> <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/Logo.png" alt="INVERSIONES FRIOCLIN C.A"> </a></h1>
 				</div>
 			
 	<div id="mainmenu">
@@ -38,7 +38,7 @@
 				array('label'=>'Empresa', 'url'=>array('/site/empresa')),
 				array('label'=>'Servicios', 'url'=>array('/site/servicio')),
 				array('label'=>'Contacto', 'url'=>array('/site/contacto')),
-				array('label'=>'Login', 'url'=>array('/site/login')),
+				array('label'=>'Intranet', 'url'=>array('/site/login')),
 				
 			),
 		));			

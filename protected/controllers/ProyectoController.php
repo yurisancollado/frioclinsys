@@ -36,7 +36,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','documentos','imagenes','loadImage','listaproyecto'),
+				'actions'=>array('create','update','documentos','imagenes','loadImage','listaproyecto','descarga'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -187,14 +187,14 @@ class ProyectoController extends Controller
 				$model -> fileName = $file -> name;
 				$model -> fileType = $file -> type;
 				$fp = fopen($file -> tempName, 'r');
-				$content = fread($fp, filesize($file -> tempName));
+				$content = fread($fp, $file->size);
 				fclose($fp);
 				$model -> binaryFile = $content;
 				$model->tipo="1";
 				
 			}
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->Proyectos_id));
+				$this->redirect(array('documentos','id'=>$model->Proyectos_id));
 		
 	
 			
@@ -222,7 +222,7 @@ class ProyectoController extends Controller
 				
 			}
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->Proyectos_id));
+				$this->redirect(array('imagenes','id'=>$model->Proyectos_id));
 		
 	
 			
@@ -247,5 +247,9 @@ public function actionListaproyecto()
 		array('dataProvider' => $dataProvider, 
 		'model' => new Proyecto, ));
 
+	}
+public function actionDescarga($id){
+		$file=Imagenproyecto::model()->findbyPk($id);
+		$file->documento;
 	}
 }

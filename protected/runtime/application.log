@@ -9110,3 +9110,358 @@ Stack trace:
 REQUEST_URI=/frioclinsys/productos/listaproducto?cliente=1
 HTTP_REFERER=http://localhost/frioclinsys/facturas/create?cliente=1
 ---
+2014/05/09 04:15:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\yii_fw\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii_fw\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii_fw\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii_fw\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\yii_fw\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii_fw\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\frioclinsys\protected\controllers\ProyectoController.php(160): CActiveRecord->findByPk('1')
+#8 C:\xampp\htdocs\frioclinsys\protected\controllers\ProyectoController.php(181): ProyectoController->loadModel('1')
+#9 [internal function]: ProyectoController->actionDocumentos('1')
+#10 C:\xampp\htdocs\yii_fw\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProyectoController), Array)
+#11 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProyectoController), Object(ReflectionMethod), Array)
+#12 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii_fw\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii_fw\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('documentos')
+#21 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/docume...')
+#22 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/frioclinsys/proyecto/documentos/1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---
+2014/05/09 04:22:35 [error] [php] filesize(): stat failed for 96974 (C:\xampp\htdocs\frioclinsys\protected\controllers\ProyectoController.php:190)
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#4 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii_fw\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii_fw\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#7 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): ProyectoController->run()
+#11 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/proyecto/documentos/1
+in C:\xampp\htdocs\frioclinsys\protected\controllers\ProyectoController.php (190)
+in C:\xampp\htdocs\frioclinsys\index.php (13)
+2014/05/09 04:23:04 [error] [php] filesize(): stat failed for 94742 (C:\xampp\htdocs\frioclinsys\protected\controllers\ProyectoController.php:190)
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#4 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii_fw\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii_fw\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#7 C:\xampp\htdocs\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): ProyectoController->run()
+#11 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/proyecto/documentos/1
+in C:\xampp\htdocs\frioclinsys\protected\controllers\ProyectoController.php (190)
+in C:\xampp\htdocs\frioclinsys\index.php (13)
+2014/05/09 04:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/09 04:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/09 04:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/09 04:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/09 04:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/11 21:06:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'FrioClin873'@'localhost' (using password: NO)' in /home2/ilfra/public_html/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home2/ilfra/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home2/ilfra/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home2/ilfra/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home2/ilfra/public_html/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home2/ilfra/public_html/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home2/ilfra/public_html/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /home2/ilfra/public_html/framework/db/ar/CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 /home2/ilfra/public_html/develop/protected/components/UserIdentity.php(22): CActiveRecord->find('LOWER(username)...', Array)
+#8 /home2/ilfra/public_html/develop/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#9 /home2/ilfra/public_html/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#10 /home2/ilfra/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#11 /home2/ilfra/public_html/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#12 /home2/ilfra/public_html/develop/protected/controllers/SiteController.php(94): CModel->validate()
+#13 /home2/ilfra/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#14 /home2/ilfra/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /home2/ilfra/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#16 /home2/ilfra/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home2/ilfra/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#18 /home2/ilfra/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#19 /home2/ilfra/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /home2/ilfra/public_html/develop/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/develop/site/login
+HTTP_REFERER=http://www.frioclin.com/develop/site/login
+---
+2014/05/11 21:07:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1044] Access denied for user 'ilfra_frio'@'localhost' to database 'ilfra_develop_frioclin'' in /home2/ilfra/public_html/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home2/ilfra/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home2/ilfra/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home2/ilfra/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home2/ilfra/public_html/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home2/ilfra/public_html/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home2/ilfra/public_html/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /home2/ilfra/public_html/framework/db/ar/CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 /home2/ilfra/public_html/develop/protected/components/UserIdentity.php(22): CActiveRecord->find('LOWER(username)...', Array)
+#8 /home2/ilfra/public_html/develop/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#9 /home2/ilfra/public_html/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#10 /home2/ilfra/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#11 /home2/ilfra/public_html/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#12 /home2/ilfra/public_html/develop/protected/controllers/SiteController.php(94): CModel->validate()
+#13 /home2/ilfra/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#14 /home2/ilfra/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /home2/ilfra/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#16 /home2/ilfra/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home2/ilfra/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#18 /home2/ilfra/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#19 /home2/ilfra/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /home2/ilfra/public_html/develop/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/develop/site/login
+HTTP_REFERER=http://www.frioclin.com/develop/site/login
+---
+2014/05/12 14:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "servicios.html" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('servicios.html')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('servicios.html')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/servicios....')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/servicios.html
+HTTP_REFERER=http://localhost/frioclinsys/site/index
+---
+2014/05/12 14:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\wamp\www\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/05/12 14:30:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'ilfra_frio'@'localhost' (using password: YES)' in C:\wamp\www\yii_fw\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\yii_fw\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\yii_fw\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\yii_fw\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\wamp\www\yii_fw\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\wamp\www\yii_fw\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\yii_fw\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 C:\wamp\www\frioclinsys\protected\components\UserIdentity.php(22): CActiveRecord->find('LOWER(username)...', Array)
+#8 C:\wamp\www\frioclinsys\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#9 C:\wamp\www\yii_fw\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#10 C:\wamp\www\yii_fw\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#11 C:\wamp\www\yii_fw\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#12 C:\wamp\www\frioclinsys\protected\controllers\SiteController.php(94): CModel->validate()
+#13 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#14 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii_fw\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii_fw\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): CController->run('login')
+#18 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#19 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/frioclinsys/site/login
+HTTP_REFERER=http://localhost/frioclinsys/site/login
+---
+2014/05/12 21:38:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/af8f5e71/jui/css/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png"' in C:\wamp\www\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/af8f5e71...')
+#1 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/assets/af8f5e71/jui/css/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/frioclinsys/facturas/create?cliente=1
+---
+2014/05/12 21:38:42 [warning] [application] Error al establecer unsafe al atributo "binaryFile" de "Facturas".
+in C:\wamp\www\frioclinsys\protected\controllers\FacturasController.php (76)
+in C:\wamp\www\frioclinsys\index.php (13)
+2014/05/12 21:39:09 [warning] [application] Error al establecer unsafe al atributo "binaryFile" de "Facturas".
+in C:\wamp\www\frioclinsys\protected\controllers\FacturasController.php (76)
+in C:\wamp\www\frioclinsys\index.php (13)
+2014/05/12 21:39:16 [warning] [application] Error al establecer unsafe al atributo "binaryFile" de "Facturas".
+in C:\wamp\www\frioclinsys\protected\controllers\FacturasController.php (76)
+in C:\wamp\www\frioclinsys\index.php (13)
+2014/05/12 21:39:20 [warning] [application] Error al establecer unsafe al atributo "binaryFile" de "Facturas".
+in C:\wamp\www\frioclinsys\protected\controllers\FacturasController.php (76)
+in C:\wamp\www\frioclinsys\index.php (13)
+2014/05/12 21:55:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "proyectos/create"' in C:\wamp\www\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('proyectos/creat...')
+#1 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/proyectos/create?cliente=1
+HTTP_REFERER=http://localhost/frioclinsys/proyecto/1
+---

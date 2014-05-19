@@ -25,7 +25,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h5>Administar Usuarios</h5>
+<h5>Administrar Usuarios</h5>
 
 <p>
 Puede escribir un operador de comparación  (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -51,7 +51,7 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 		'name'=>'estado',
 		'header'=>'Estado',
 		'value'=>'$data->Estado',
-		'filter'=>Usuario::getListaEstado(),
+		'filter'=>Usuario::model()->getListaEstado(),
 		),
 		array(
 			'class'=>'CButtonColumn',
