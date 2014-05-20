@@ -29,7 +29,7 @@ $this->pageTitle=Yii::app()->name;
 
                         <span class="text1 col1"><a href="w">    </a></span></h3>
                     Servicio de gestión de mantenimiento preventivo y correctivo a sistemas de aires acondicionado de mediana y alta capacidad.
- <br> <a href="servicios.html" class="btn">Leer mas</a>
+ <br> <a href="<?php echo Yii::app()->request->baseUrl; ?>/site/servicio" class="btn">Leer mas</a>
                 </div>
             </div>
             <div class="container_12">
@@ -39,7 +39,7 @@ $this->pageTitle=Yii::app()->name;
                 <div class="grid_8">
                     <h3 class="mb0">Proyectos<span class="text1 col1"><a href="#"></a></span></h3>
                     Elaboración de proyectos con visión  de aprovechamiento de recursos, eficientes y amigables con el medio ambiente.
- <br> <a href="servicios.html" class="btn">Leer mas</a>
+ <br> <a href="<?php echo Yii::app()->request->baseUrl; ?>/site/servicio" class="btn">Leer mas</a>
                 </div>
             </div>
         </div>

@@ -36,7 +36,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','documentos','imagenes','loadImage','listaproyecto','descarga'),
+				'actions'=>array('create','update','documentos','imagenes','loadImage','listaproyecto','descarga','eliminar'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -251,5 +251,20 @@ public function actionListaproyecto()
 public function actionDescarga($id){
 		$file=Imagenproyecto::model()->findbyPk($id);
 		$file->documento;
+	}
+public function actionEliminar($id,$pag){
+		$file=Imagenproyecto::model()->findbyPk($id);
+		$proyecto_id=$file->Proyectos_id;
+		$file->delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax'])){
+			if($pag=="doc")
+				$this->redirect(array('documentos','id'=>$proyecto_id));
+			else 
+				$this->redirect(array('imagenes','id'=>$proyecto_id));
+		}
+		
+	
 	}
 }

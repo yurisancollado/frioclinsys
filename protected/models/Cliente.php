@@ -39,8 +39,8 @@ class Cliente extends CActiveRecord
 		return array(
 			array('razon_social, rif, codigo, direccion, representante, password', 'required'),
 			array('razon_social, direccion, representante', 'length', 'max'=>250),
-			array('rif, nit', 'length', 'max'=>20),
-			array('codigo', 'length', 'max'=>50),
+			array('rif, nit', 'length', 'min'=>9,'max'=>10),
+			array('codigo', 'length', 'min'=>4,'max'=>50),
 			array('telefono', 'length', 'max'=>100),
 			array('password', 'length', 'min'=>6,'max'=>50),
 			array('username','unique', 'message'=>'Ya se encuentra registrado el Nombre de Usuario'),
@@ -158,4 +158,6 @@ class Cliente extends CActiveRecord
 	public function getListaEstado() {
 		return self::$estado;
 	}
+	
+	
 }

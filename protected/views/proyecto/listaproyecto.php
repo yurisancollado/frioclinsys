@@ -1,6 +1,7 @@
 <?php
 /* @var $this ProyectoController */
 /* @var $model Proyecto */
+$cliente=Cliente::model()->findByPk($_GET['cliente']);
 $this->pageTitle="Administrar Proyectos";
 $this->breadcrumbs=array(
 	'Proyectos'=>array('admin'),
@@ -8,7 +9,24 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
+	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
+	array('label'=>'Administrar Facturas', 'url'=>array('facturas/admin')),
 	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
+	);
+$this->bolmenu2=true;
+$this->nombreCliente=$cliente->razon_social;
+
+$this->menu2=array(
+	array('label'=>'Ver Cliente', 'url'=>array('cliente/view','id'=>$cliente->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Facturas', 'url'=>array('facturas/listafactura','cliente'=>$cliente->id)),
+	array('label'=>'Crear Factura', 'url'=>array('facturas/create','cliente'=>$cliente->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Crear Proyectos', 'url'=>array('proyecto/create','cliente'=>$cliente->id)),
+	array('label'=>'<hr>'),
+	array('label'=>'Listar Productos', 'url'=>array('producto/listaproducto','cliente'=>$cliente->id)),
+	array('label'=>'Asociar Productos', 'url'=>array('producto/create','cliente'=>$cliente->id)),
+	
 );
 
 Yii::app()->clientScript->registerScript('search', "

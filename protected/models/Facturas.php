@@ -141,4 +141,10 @@ class Facturas extends CActiveRecord
 		$criteria -> addCondition('Cliente_id=' . $id);
 		return new CActiveDataProvider($this, array('criteria' => $criteria, ));
 	}
+	public function getDocumento(){
+		 header("Content-type: ".$this->fileType);
+		 header('Content-Disposition: attachment; filename='.$this->fileName);
+		 header('Content-Transfer-Encoding: binary');
+		 print $this->binaryFile;
+	}
 }
