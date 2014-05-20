@@ -1,6 +1,5 @@
 <?php
-/* @var $this ProyectoController */
-/* @var $model Proyecto */
+
 $proyecto=Proyecto::model()->findByPk($model->Proyectos_id);
 
 $this->pageTitle="Proyecto Imagenes- ".$proyecto->nombre;

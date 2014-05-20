@@ -36,6 +36,9 @@ class Producto extends CActiveRecord
 			array('TipoProducto_id, Marca_id, Usuario_id, costo, estado', 'length', 'max'=>10),
 			array('nombre', 'length', 'max'=>250),
 			array('modelo', 'length', 'max'=>50),
+			array('modelo','unique', 'message'=>'Ya se encuentra registrado el Modelo'),
+			array('costo', 'numerical'),
+			
 			array('especificacion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -52,7 +55,9 @@ class Producto extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			 'marca'    => array(self::BELONGS_TO, 'Marca',    'Marca_id'),
-			  'tipo'    => array(self::BELONGS_TO, 'Tipoproducto',    'TipoProducto_id'),
+			  'tipo'    => array(self::BELONGS_TO, 'TipoProducto',    'TipoProducto_id'),
+			'imagenes' => array(self::HAS_MANY, 'Imagenproducto', 'Productos_Id', 'condition'=>'tipo=2'),
+			
 		);
 	}
 
@@ -69,7 +74,7 @@ class Producto extends CActiveRecord
 			'nombre' => 'Nombre',
 			'modelo' => 'Modelo',
 			'especificacion' => 'Especificacion',
-			'costo' => 'Costo',
+			'costo' => 'Costo (Bs.)',
 			'estado' => 'Estado',
 		);
 	}

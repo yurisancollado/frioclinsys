@@ -36,7 +36,7 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'Marca_id'); ?>
-		<?php echo $form->dropDownList($model,'Marca_id', CHtml::listData(Marca::model()->findAll(),'id','nombre'), array('empty' => 'Elige una opción')); ?>
+		<?php echo $form->dropDownList($model,'Marca_id', CHtml::listData(Marca::model()->findAll(),'id','Nombre'), array('empty' => 'Elige una opción')); ?>
 
 		<?php echo $form->error($model,'Marca_id'); ?>
 	</div>

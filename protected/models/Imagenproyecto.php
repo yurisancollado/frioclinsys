@@ -115,8 +115,6 @@ class Imagenproyecto extends CActiveRecord
 																				));
 	}
 	public function getDocumento(){
-		
-		
 		 header("Content-type: ".$this->fileType);
 		 header('Content-Disposition: attachment; filename='.$this->fileName);
 		 header('Content-Transfer-Encoding: binary');
