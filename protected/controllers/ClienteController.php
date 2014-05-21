@@ -36,7 +36,7 @@ class ClienteController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','desactivar','activar'),
+				'actions'=>array('create','update','desactivar','activar','micuenta','micuentacontrasena'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -200,5 +200,33 @@ class ClienteController extends Controller
 		if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		
+	}
+	public function actionMicuenta()
+	{
+		$this->render('micuenta',array(
+			'model'=>$this->loadModel(Yii::app()->user->id),
+		));
+	}
+	
+	public function actionMicuentacontrasena($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		 $this->performAjaxValidation($model);
+
+		if(isset($_POST['Cliente']))
+		{
+			$model->attributes=$_POST['Cliente'];
+			if($model->password!=="")
+				$model->password=md5($model->password);
+			$model->username=$model->rif;			
+			if($model->save())
+				$this->redirect(array('micuenta','id'=>$model->id));
+		}
+
+		$this->render('micuentacontrasena',array(
+			'model'=>$model,
+		));
 	}
 }

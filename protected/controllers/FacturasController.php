@@ -36,7 +36,7 @@ class FacturasController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','loadImage','listafactura','descarga'),
+				'actions'=>array('create','update','loadImage','listafactura','descarga','mifactura'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -55,7 +55,12 @@ class FacturasController extends Controller
 	 */
 	public function actionView($id)
 	{
+		if(Yii::app()->user->getState('tipoUsuario')=="usuario"){	
 		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
+		}else
+			$this->render('mifactura_detalle',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -212,5 +217,13 @@ class FacturasController extends Controller
 		$model = $this -> loadModel($id);	
 		$model->documento;
 	}
+	public function actionMifactura()
+	{
 	
+		$dataProvider = Facturas::model() -> clienteFactura(Yii::app()->user->id);
+		$this -> render('mifactura',
+		array('dataProvider' => $dataProvider, 
+		'model' => new Facturas, ));
+
+	}
 }

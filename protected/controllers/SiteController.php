@@ -95,7 +95,7 @@ class SiteController extends Controller
 				if(Yii::app()->user->getState('tipoUsuario')=="usuario")
 					$this->redirect(array('usuario/admin'));
 				else
-					$this->redirect(array('cliente/ver'));
+					$this->redirect(array('cliente/micuenta'));
 			}				
 		}
 		// display the login form
