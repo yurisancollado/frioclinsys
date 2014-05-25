@@ -47,6 +47,8 @@ class Imagenproducto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+		'producto' => array(self::BELONGS_TO, 'Producto', 'Productos_id'),
+		
 		);
 	}
 
@@ -58,7 +60,7 @@ class Imagenproducto extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'Productos_id' => 'Productos',
-			'binaryFile' => 'Binary File',
+			'binaryFile' => 'Imagen',
 			'fileType' => 'File Type',
 			'fileName' => 'File Name',
 			'tipo' => 'Tipo',
@@ -106,5 +108,11 @@ class Imagenproducto extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	public function getImagen($width = 100){
+		return html_entity_decode(CHtml::image(Yii::app()->controller->createUrl('producto/loadImage', array('id'=>$this->id))
+																				,'alt'
+																				,array('width'=>$width)
+																				));
 	}
 }

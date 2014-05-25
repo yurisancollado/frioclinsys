@@ -1,6 +1,7 @@
 <?php
 /* @var $this ProyectoController */
 /* @var $model Proyecto */
+$this->pageTitle="Proyecto - ".$model->nombre;
 
 $this->breadcrumbs=array(
 	'Proyectos'=>array('admin'),
@@ -31,8 +32,8 @@ $this->menu2=array(
 	array('label'=>'Listar Facturas', 'url'=>array('facturas/listafactura','cliente'=>$cliente->id)),
 	array('label'=>'Crear Factura', 'url'=>array('facturas/create','cliente'=>$cliente->id)),
 	array('label'=>'<hr>'),	
-	array('label'=>'Listar Productos', 'url'=>array('productos/listaproducto','cliente'=>$cliente->id)),
-	array('label'=>'Asociar Proyectos', 'url'=>array('proyectos/create','cliente'=>$cliente->id)),
+	array('label'=>'Listar Productos', 'url'=>array('producto/listaproducto','cliente'=>$cliente->id)),
+	array('label'=>'Asociar Productos', 'url'=>array('producto/create','cliente'=>$cliente->id)),
 	
 );
 ?>

@@ -36,7 +36,7 @@ class FacturasController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','loadImage','listafactura'),
+				'actions'=>array('create','update','loadImage','listafactura','descarga','mifactura'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -55,7 +55,12 @@ class FacturasController extends Controller
 	 */
 	public function actionView($id)
 	{
+		if(Yii::app()->user->getState('tipoUsuario')=="usuario"){	
 		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
+		}else
+			$this->render('mifactura_detalle',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -108,6 +113,15 @@ class FacturasController extends Controller
 		if(isset($_POST['Facturas']))
 		{
 			$model->attributes=$_POST['Facturas'];
+			if (!empty($_FILES['Facturas']['tmp_name']['binaryFile'])) {
+				$file = CUploadedFile::getInstance($model, 'binaryFile');
+				$model -> fileName = $file -> name;
+				$model -> fileType = $file -> type;
+				$fp = fopen($file -> tempName, 'r');
+				$content = fread($fp, filesize($file -> tempName));
+				fclose($fp);
+				$model -> binaryFile = $content;
+			}
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -199,5 +213,17 @@ class FacturasController extends Controller
 		print $model -> binaryFile;
 
 	}
+	public function actionDescarga($id){
+		$model = $this -> loadModel($id);	
+		$model->documento;
+	}
+	public function actionMifactura()
+	{
 	
+		$dataProvider = Facturas::model() -> clienteFactura(Yii::app()->user->id);
+		$this -> render('mifactura',
+		array('dataProvider' => $dataProvider, 
+		'model' => new Facturas, ));
+
+	}
 }

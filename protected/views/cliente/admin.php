@@ -1,7 +1,7 @@
 <?php
 /* @var $this ClienteController */
 /* @var $model Cliente */
-$this->pageTitle="Administraar Cliente";
+$this->pageTitle="Administrar Cliente";
 $this->breadcrumbs=array(
 	'Clientes'=>array('admin'),
 	'Administrar',
@@ -45,6 +45,7 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 	'filter'=>$model,
 	'columns'=>array(
 		'codigo',
+		
 		'razon_social',
 		'rif',				
 		'direccion',

@@ -37,7 +37,7 @@ class ProductoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','imagenes'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -75,7 +75,8 @@ class ProductoController extends Controller
 		if(isset($_POST['Producto']))
 		{
 			$model->attributes=$_POST['Producto'];
-			$model->User_id=Yii::app()->user->id;
+			$model->Usuario_id=Yii::app()->user->id;
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -176,4 +177,34 @@ class ProductoController extends Controller
 			Yii::app()->end();
 		}
 	}
-}
+	public function actionImagenes($id)
+	{
+		$producto=$this->loadModel($id);
+		$model=new Imagenproducto;
+		$model->Productos_id=$id;		
+		if (!empty($_FILES['Imagenproducto']['tmp_name']['binaryFile'])) {
+				$file = CUploadedFile::getInstance($model, 'binaryFile');
+				$model -> fileName = $file -> name;
+				$model -> fileType = $file -> type;
+				$fp = fopen($file -> tempName, 'r');
+				$content = fread($fp, filesize($file -> tempName));
+				fclose($fp);
+				$model -> binaryFile = $content;
+				$model->tipo="2";
+				
+			}
+			if($model->save())
+				$this->redirect(array('imagenes','id'=>$model->Productos_id));
+		$this->render('imagenes',array(
+			'producto'=>$producto,
+			'model'=>$model,
+		));
+	}
+
+	public function actionloadImage($id) {
+		$model = Imagenproducto::model()->findByPk($id);
+		header('Content-Type: ' . $model -> fileType);
+		print $model -> binaryFile;
+
+	}
+	}

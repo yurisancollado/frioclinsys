@@ -44,11 +44,12 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		
 		'nombre',
 		'modelo',
-		'marca.nombre',
+		'marca.Nombre',
 		'tipo.nombre',
+		'costo',
 		/*
 		'especificacion',
 		'costo',

@@ -43,16 +43,32 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 	'id'=>'proyecto-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'afterAjaxUpdate' => 'reinstallDatePicker',
 	'columns'=>array(
 		
-		'clientes.razon_social',
+		 array(
+		'name'=>'Cliente_id',
+		'header'=>'Razon Social',
+		'value'=>'$data->clientes->razon_social',
+		'filter'=>CHtml::listData(Cliente::model()->findAll(array('order'=>'razon_social')), 'id', 'razon_social'),
+		),
 		'nombre',
 		'tipoproyectos.nombre',
 		'porcentaje',
-		 array(            
-        'name'=>'fecha_inicio',
-        'value'=>'date("d-m-Y", strtotime($data->fecha_inicio))',
-    	),
+		array(
+            'name' => 'fecha_inicio',
+            'value'=>'$data->fecha_inicio',
+             'filter'=>$this->widget('zii.widgets.jui.CJuiDatepicker', array(
+                'model'=>$model,
+                'attribute'=>'fecha_inicio',
+                'htmlOptions' => array(
+                    'id' => 'event_date_search'
+                ), 
+                'options' => array(
+                    'dateFormat' => 'yy-mm-dd'
+                )
+            ), true)
+			),
     	 array(            
         'name'=>'fecha_fin',
         'value'=>'date("d-m-Y", strtotime($data->fecha_fin))',
@@ -68,4 +84,10 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 			'template'=>'{view}{update}',
 		),
 	),
-)); ?>
+)); 
+Yii::app()->clientScript->registerScript('re-install-date-picker', "
+function reinstallDatePicker(id, data) {
+        //use the same parameters that you had set in your widget else the datepicker will be refreshed by default
+    $('#event_date_search').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['es'],{'dateFormat':'yy-mm-dd'}));
+}
+"); ?>

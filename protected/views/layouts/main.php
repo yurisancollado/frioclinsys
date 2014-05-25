@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/form.css" />
 	<title><?php echo CHtml::encode($this -> pageTitle); ?></title>
+	<link rel="shortcut icon" href="<?php echo Yii::app() -> request -> baseUrl; ?>/images/favicon.ico" />
 </head>
 <body class="page1" id="top">
  <!--==============================header=================================-->
@@ -62,11 +63,10 @@
 # Menu Cliente				
 				$this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
-						array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Productos', 'url'=>array('/producto/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Mi Cuenta', 'url'=>array('/cliente/micuenta'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Facturas', 'url'=>array('/facturas/mifactura'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Proyectos', 'url'=>array('/proyecto/miproyecto'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Catalogo', 'url'=>array('/producto/catalogo'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),		
@@ -149,11 +149,10 @@
 # Menu Cliente				
 				$this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
-						array('label'=>'Usuarios', 'url'=>array('/usuario/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Clientes', 'url'=>array('/cliente/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Facturas', 'url'=>array('/facturas/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Proyectos', 'url'=>array('/proyecto/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Productos', 'url'=>array('/producto/admin'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Mi Cuenta', 'url'=>array('/cliente/micuenta'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Facturas', 'url'=>array('/facturas/mifactura'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Proyectos', 'url'=>array('/proyecto/miproyecto'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Catalogo', 'url'=>array('/producto/catalogo'),'visible'=>!Yii::app()->user->isGuest),
 					),		
 				));				
 			}

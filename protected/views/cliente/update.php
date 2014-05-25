@@ -23,12 +23,12 @@ $this->menu2=array(
 	array('label'=>'Listar Proyectos', 'url'=>array('proyecto/listaproyecto','cliente'=>$model->id)),
 	array('label'=>'Crear Proyectos', 'url'=>array('proyecto/create','cliente'=>$model->id)),
 	array('label'=>'<hr>'),
-	array('label'=>'Listar Productos', 'url'=>array('productos/listaproducto','cliente'=>$model->id)),
-	array('label'=>'Asociar Proyectos', 'url'=>array('proyectos/create','cliente'=>$model->id)),
+	array('label'=>'Listar Productos', 'url'=>array('producto/listaproducto','cliente'=>$model->id)),
+	array('label'=>'Asociar Productos', 'url'=>array('producto/create','cliente'=>$model->id)),
 	
 );
 ?>
 
-<h5>Modificar <?php echo $model->razon_social; ?></h5>
+<h5>Modificar: <?php echo $model->razon_social; ?></h5>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

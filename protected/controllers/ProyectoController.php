@@ -36,7 +36,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','documentos','imagenes','loadImage','listaproyecto','descarga'),
+				'actions'=>array('create','update','documentos','imagenes','loadImage','listaproyecto','descarga','eliminar','miproyecto','miproyecto_imagen'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -55,9 +55,16 @@ class ProyectoController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+		$proyecto=$this->loadModel($id);	
+		if(Yii::app()->user->getState('tipoUsuario')=="usuario")	
+			$this->render('view',array(
+				'model'=>$this->loadModel($id),
+			));
+		else
+			$this->render('miproyecto_detalle',array(
+				'model'=>$this->loadModel($id),
+				'proyecto'=>$proyecto
+			));
 	}
 
 	/**
@@ -251,5 +258,36 @@ public function actionListaproyecto()
 public function actionDescarga($id){
 		$file=Imagenproyecto::model()->findbyPk($id);
 		$file->documento;
+	}
+public function actionEliminar($id,$pag){
+		$file=Imagenproyecto::model()->findbyPk($id);
+		$proyecto_id=$file->Proyectos_id;
+		$file->delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax'])){
+			if($pag=="doc")
+				$this->redirect(array('documentos','id'=>$proyecto_id));
+			else 
+				$this->redirect(array('imagenes','id'=>$proyecto_id));
+		}
+		}
+public function actionMiproyecto()
+	{
+		
+		$dataProvider = Proyecto::model() -> clienteProyecto(Yii::app()->user->id);
+		$this -> render('miproyecto',
+		array('dataProvider' => $dataProvider, 
+		'model' => new Proyecto,		 ));
+	}
+	public function actionMiproyecto_imagen($id)
+	{
+		$proyecto=$this->loadModel($id);
+		$model=new Imagenproyecto;
+		$model->Proyectos_id=$id;
+		$this->render('miproyecto_imagen',array(
+			'proyecto'=>$proyecto,
+			'model'=>$model,
+		));
 	}
 }

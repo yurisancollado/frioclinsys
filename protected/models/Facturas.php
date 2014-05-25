@@ -103,7 +103,6 @@ class Facturas extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('Usuario_id',$this->Usuario_id,true);
 		$criteria->compare('Cliente_id',$this->Cliente_id,true);
@@ -114,7 +113,6 @@ class Facturas extends CActiveRecord
 		$criteria->compare('fileType',$this->fileType,true);
 		$criteria->compare('fileName',$this->fileName,true);
 		$criteria->compare('numero',$this->numero);
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -141,4 +139,10 @@ class Facturas extends CActiveRecord
 		$criteria -> addCondition('Cliente_id=' . $id);
 		return new CActiveDataProvider($this, array('criteria' => $criteria, ));
 	}
-}
+	public function getDocumento(){
+		 header("Content-type: ".$this->fileType);
+		 header('Content-Disposition: attachment; filename='.$this->fileName);
+		 header('Content-Transfer-Encoding: binary');
+		 print $this->binaryFile;
+	}
+	}
