@@ -36,7 +36,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','documentos','imagenes','loadImage','listaproyecto','descarga','eliminar','miproyecto','miproyecto_imagen'),
+				'actions'=>array('create','update','documentos','imagenes','loadImage','loadImageCenter','listaproyecto','descarga','eliminar','miproyecto','miproyecto_imagen'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -243,6 +243,14 @@ class ProyectoController extends Controller
 		$model = Imagenproyecto::model()->findByPk($id);
 		header('Content-Type: ' . $model -> fileType);
 		print $model -> binaryFile;
+
+	}
+	public function actionloadImageCenter($id) {
+		$model = Imagenproyecto::model()->findByPk($id);
+		header('Content-Type: ' . $model -> fileType);
+		echo "<div style='margin:auto auto auto auto'>";
+		print $model -> binaryFile;
+		echo "</div>";
 
 	}
 

@@ -1,3 +1,5 @@
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/source/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/js/source/jquery.fancybox.css" type="text/css" media="screen" />
 <?php
 
 $proyecto=Proyecto::model()->findByPk($model->Proyectos_id);
@@ -80,10 +82,21 @@ $this->menu2=array(
 <div>
 	<?php foreach($proyecto->imagenes as $imagen){
 		echo $imagen->imagen."  ";
+		$a=$imagen->imagen;
+		echo "<a class='grouped_elements' rel='group1' href='/develop/proyecto/loadImage/1'>".$imagen->imagen."</a>";
 		
 	}
-	
+	echo '<a class="ejemplo_1" href="/proyecto/loadImage/1" title="Imagen simple">'.$a.'</a> ';
 	?>
 	
 	
 </div>
+<script>
+	
+	$(document).ready(function(){  
+    $(".grouped_elements").fancybox({type:"iframe",autoDimensions:true});  
+}); 
+	
+	
+	
+</script>
