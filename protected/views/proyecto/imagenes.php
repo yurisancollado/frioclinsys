@@ -81,22 +81,45 @@ $this->menu2=array(
 
 <div>
 	<?php foreach($proyecto->imagenes as $imagen){
-		echo $imagen->imagen."  ";
-		$a=$imagen->imagen;
-		echo "<a class='grouped_elements' rel='group1' href='/develop/proyecto/loadImage/1'>".$imagen->imagen."</a>";
+?>
+		<div style="margin:2px; border:solid 1px #666; width:100px; height:100px; float:left;">
+		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'/proyecto/loadImage/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/proyecto/descarga/'.$imagen->id; ?>")'>
+			<?php echo $imagen->imagen;?>
+		</a>
+		</div>
+		<?php
 		
 	}
-	echo '<a class="ejemplo_1" href="/proyecto/loadImage/1" title="Imagen simple">'.$a.'</a> ';
+
 	?>
+	<?php
+	$this->beginWidget('zii.widgets.jui.CJuiDialog',array(
+		'id'=>'myModal',
+		
+		'options'=>array(
+			
+
+			'autoOpen'=>false,
+			'resizable'=>false,
+			'modal'=>true,
+			'overlay'=>array(
+				'backgroundColor'=>'#000',
+				'opacity'=>'0.8'
+			),
+		),
+	));
+	$this->endWidget('zii.widgets.jui.CJuiDialog');
 	
+	?>
 	
 </div>
 <script>
 	
-	$(document).ready(function(){  
-    $(".grouped_elements").fancybox({type:"iframe",autoDimensions:true});  
-}); 
-	
+	$('#myModal').attr('align','center');
+	function modal( img,download){
+		$('#myModal').html('<img  src="'+img+'" alt="alt"/><br/><a href="'+download+'">Descargar</a>');
+		$('#myModal').dialog('open');
+	}
 	
 	
 </script>
