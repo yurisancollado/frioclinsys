@@ -48,21 +48,25 @@
 					</div>
 				</div>
 				<label class="name">
-					<input type="text" placeholder="Nombre" data-bvalidator="alphanum,required" name="nombre">
+					<input class="_placeholder" type="text" placeholder="Nombre" data-bvalidator="alphanum,required" name="nombre">
 					<!--<span class="empty-message">*This field is required.</span> <span class="error-message">*This is not a valid name.</span> <span class="_placeholder" style="left: 0px; top: 0px; width: 386px; height: 41px;">Nombre*:</span>
 					--></label>
+					<br />
 				<label class="email">
 					<input type="text" placeholder="Correo Electrónico" data-bvalidator="required,email" name="email">
 					<!--<span class="empty-message">*This field is required.</span> <span class="error-message">*This is not a valid email.</span> <span class="_placeholder" style="left: 0px; top: 0px; width: 386px; height: 41px;">E-mail*:</span>
 					--></label>
+					<br />
 				<label class="phone">
 					<input type="text" placeholder="Teléfono"  data-bvalidator="number,required" name="tlf">
 					<!--<span class="empty-message">*This field is required.</span> <span class="error-message">*This is not a valid phone.</span> <span class="_placeholder" style="left: 0px; top: 0px; width: 386px; height: 41px;">Telefono:</span>
 					--></label>
+					<br />
 				<label class="message"> 					
 				<textarea placeholder="Mensaje" data-bvalidator="rangelength[1:999],required" name="mens"></textarea> 
 				<!--<span class="empty-message">*This field is required.</span> <span class="error-message">*The message is too short.</span> <span class="_placeholder" style="left: 0px; top: 0px; width: 428px; height: 139px;">Mensaje:</span>--></label>
 				<div>
+					<br />
 					<div class="clear"></div>
 					<div class="btns">
 						<input type="submit" value="Enviar" onclick="alert('Gracias por comunicarse con nosotros, su correo será respondido a la brevedad posible.')">

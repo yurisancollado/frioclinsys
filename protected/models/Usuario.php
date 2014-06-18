@@ -18,7 +18,7 @@ class Usuario extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
-	 public static $estado = array('1' => 'Activo', '0' => 'Inactivo');
+	 public static $estado=array('1'=>'Activo','0'=>'Inactivo');
 	public function tableName()
 	{
 		return 'usuario';
@@ -100,6 +100,8 @@ class Usuario extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort'=>array('defaultOrder'=>'nombre ASC'), // orden por defecto según el atributo nombre
+    	'pagination'=>array('pageSize'=>10),
 		));
 	}
 
@@ -126,14 +128,14 @@ class Usuario extends CActiveRecord
 		return md5($password);
 	}
 	
-	public function getEstado() {
-		if ($this -> estado == 1)
+	public function getEstado(){
+		if($this->estado==1)
 			return 'Activo';
-		elseif ($this -> estado == 0)
+		elseif($this->estado==0)
 			return 'Inactivo';
 	}
 
-	public function getListaEstado() {
+	public function getListaEstado(){
 		return self::$estado;
 	}
 	public function getNombreCompleto() {
