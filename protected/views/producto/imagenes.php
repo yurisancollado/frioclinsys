@@ -1,26 +1,23 @@
-<?php
-/* @var $this ProyectoController */
-/* @var $model Proyecto */
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/source/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/js/source/jquery.fancybox.css" type="text/css" media="screen" />
 
+<?php
 
 $this->pageTitle="Proyecto Imagenes- ".$producto->nombre;
 $pag="img";
-
-
 $this->menu=array(
 	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
 	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
 	);
 $this->bolmenu2=true;
 $this->nombreCliente=$producto->nombre;
-
 $this->menu2=array(
-		array('label'=>'Crear Producto', 'url'=>array('create')),
+	array('label'=>'Crear Producto', 'url'=>array('create')),
+	array('label'=>'Ver Producto', 'url'=>array('view', 'id'=>$model->id)),		
 	array('label'=>'Modificar Producto', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Producto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Esta seguro de eliminar el producto?')),
 	array('label'=>'<hr>'),
 	array('label'=>'Imagenes', 'url'=>'#', 'url'=>array('imagenes', 'id'=>$model->id)),
-	
 		
 );
 ?>
@@ -64,14 +61,43 @@ $this->menu2=array(
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+
+<div>
 	<?php foreach($producto->imagenes as $imagen){
-		echo $imagen->imagen."  ";
+?>
+		<div style="margin:2px; border:solid 1px #666; width:100px; height:100px; float:left;">
+		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'/producto/loadImage/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/descarga/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/eliminar/'.$imagen->id; ?>")'>
+			<img  src="<?php echo Yii::app()->request->baseUrl.'/producto/loadImage/'.$imagen->id ?>" alt="alt"height="100" width="100"/>
+		</a>
+		</div>
+		<?php
 		
 	}
-	
+
 	?>
-<div>
-	
-	
+	<?php
+	$this->beginWidget('zii.widgets.jui.CJuiDialog',array(
+		'id'=>'myModal',		
+		'options'=>array(
+		'autoOpen'=>false,
+			'resizable'=>false,
+			'modal'=>true,
+			'overlay'=>array(
+				'backgroundColor'=>'#000',
+				'opacity'=>'0.8'
+			),
+		),
+	));
+	$this->endWidget('zii.widgets.jui.CJuiDialog');
+		?>
 	
 </div>
+<script>	
+	$('#myModal').attr('align','center');
+	function modal( img,download,eliminar){
+		$('#myModal').html('<img  src="'+img+'" alt="alt"/><br/><a href="'+download+'">Descargar</a>   <a style="color:red" href="'+eliminar+'">Eliminar</a>');
+		$('#myModal').dialog('open');
+	}
+	
+</script>

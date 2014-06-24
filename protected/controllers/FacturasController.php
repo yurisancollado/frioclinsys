@@ -173,11 +173,12 @@ class FacturasController extends Controller
 	
 	public function actionListafactura()
 	{
+		$model=new Facturas('search');
+		$model->unsetAttributes();
+		$this->render('listafactura',array(
+			'model'=>$model,
+		));
 	
-		$dataProvider = Facturas::model() -> clienteFactura($_GET['cliente']);
-		$this -> render('listafactura',
-		array('dataProvider' => $dataProvider, 
-		'model' => new Facturas, ));
 
 	}
 	/**

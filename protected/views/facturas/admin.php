@@ -11,24 +11,9 @@ $this->menu=array(
 	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#facturas-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
 <h5>Administar Facturas</h5>
-
-
-
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'facturas-grid',
@@ -40,7 +25,7 @@ $('.search-form form').submit(function(){
     	array(
             'name' => 'fecha',
             'value'=>'$data->fecha',
-             'filter'=>$this->widget('zii.widgets.jui.CJuiDatepicker', array(
+             'filter'=>$this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
                 'attribute'=>'fecha',
                 'htmlOptions' => array(
@@ -55,7 +40,7 @@ $('.search-form form').submit(function(){
 		'name'=>'Cliente_id',
 		'header'=>'Razon Social',
 		'value'=>'$data->clientes->razon_social',
-		'filter'=>CHtml::listData(Cliente::model()->findAll(array('order'=>'razon_social')), 'id', 'razon_social'),
+		'filter'=>CHtml::listData(Marca::model()->findAll(array('order'=>'nombre')), 'id', 'nombre'),
 		),
 		'monto',
 		/*

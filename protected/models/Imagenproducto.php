@@ -112,7 +112,13 @@ class Imagenproducto extends CActiveRecord
 	public function getImagen($width = 100){
 		return html_entity_decode(CHtml::image(Yii::app()->controller->createUrl('producto/loadImage', array('id'=>$this->id))
 																				,'alt'
-																				,array('width'=>$width)
+																				,array('width'=>$width, 'height'=>100)
 																				));
+	}
+	public function getDocumento(){
+		 header("Content-type: ".$this->fileType);
+		 header('Content-Disposition: attachment; filename='.$this->fileName);
+		 header('Content-Transfer-Encoding: binary');
+		 print $this->binaryFile;
 	}
 }

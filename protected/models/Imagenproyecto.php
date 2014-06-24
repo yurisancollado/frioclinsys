@@ -111,7 +111,7 @@ class Imagenproyecto extends CActiveRecord
 	public function getImagen($width = 100){
 		return html_entity_decode(CHtml::image(Yii::app()->controller->createUrl('proyecto/loadImage', array('id'=>$this->id))
 																				,'alt'
-																				,array('width'=>$width)
+																				,array('width'=>$width, 'height'=>100)
 																				));
 	}
 	public function getDocumento(){

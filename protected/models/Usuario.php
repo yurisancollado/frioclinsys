@@ -95,13 +95,12 @@ class Usuario extends CActiveRecord
 		$criteria->compare('apellido',$this->apellido,true);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
+		$criteria->compare('estado',$this->estado,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('last_login',$this->last_login,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
-			'sort'=>array('defaultOrder'=>'nombre ASC'), // orden por defecto según el atributo nombre
-    	'pagination'=>array('pageSize'=>10),
 		));
 	}
 
@@ -128,14 +127,14 @@ class Usuario extends CActiveRecord
 		return md5($password);
 	}
 	
-	public function getEstado(){
-		if($this->estado==1)
+	public function getEstado() {
+		if ($this -> estado == 1)
 			return 'Activo';
-		elseif($this->estado==0)
+		elseif ($this -> estado == 0)
 			return 'Inactivo';
 	}
 
-	public function getListaEstado(){
+	public function getListaEstado() {
 		return self::$estado;
 	}
 	public function getNombreCompleto() {

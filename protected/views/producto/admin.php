@@ -37,9 +37,19 @@ $('.search-form form').submit(function(){
 		
 		'nombre',
 		'modelo',
-		'marca.Nombre',
-		'tipo.nombre',
-		'costo',
+		 array(
+		'name'=>'Marca_id',
+		'header'=>'Marca',
+		'value'=>'$data->marca->Nombre',
+		'filter'=>CHtml::listData(Marca::model()->findAll(array('order'=>'Nombre')), 'id', 'Nombre'),
+		),
+		 array(
+		'name'=>'TipoProducto_id',
+		'header'=>'Tipo',
+		'value'=>'$data->tipo->nombre',
+		'filter'=>CHtml::listData(TipoProducto::model()->findAll(array('order'=>'nombre')), 'id', 'nombre'),
+		),
+	    'costo',
 		/*
 		'especificacion',
 		'costo',

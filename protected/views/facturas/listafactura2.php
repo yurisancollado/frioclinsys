@@ -28,36 +28,23 @@ $this->menu2=array(
 	array('label'=>'Asociar Productos', 'url'=>array('producto/create','cliente'=>$cliente->id)),
 	
 );
+
 ?>
+
 <h5>Administar Facturas</h5>
 
-<?php
 
-$dataProvider = $model->search();
-$dataProvider->criteria->addCondition('Cliente_id='.$cliente->id);
-
-$this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'facturas-grid',
 	'dataProvider'=>$dataProvider,
 	'filter'=>$model,
-	'afterAjaxUpdate' => 'reinstallDatePicker',
 	'columns'=>array(
-		'numero',	
-    	array(
-            'name' => 'fecha',
-            'value'=>'$data->fecha',
-             'filter'=>$this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                'model'=>$model,
-                'attribute'=>'fecha',
-                'htmlOptions' => array(
-                    'id' => 'event_date_search'
-                ), 
-                'options' => array(
-                    'dateFormat' => 'yy-mm-dd'
-                )
-            ), true)
-			),
-    	
+		'numero',
+		 array(            
+        'name'=>'fecha',
+        'value'=>'date("d-m-Y", strtotime($data->fecha))',
+    	),
+			
 		'monto',
 		/*
 		'binaryFile',
@@ -70,12 +57,4 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'template'=>'{view}{update}',
 		),
 	),
-));
-
-Yii::app()->clientScript->registerScript('re-install-date-picker', "
-function reinstallDatePicker(id, data) {
-        //use the same parameters that you had set in your widget else the datepicker will be refreshed by default
-    $('#event_date_search').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['es'],{'dateFormat':'yy-mm-dd'}));
-}
-"); ?>
-
+)); ?>

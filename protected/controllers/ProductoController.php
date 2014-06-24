@@ -37,7 +37,7 @@ class ProductoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','imagenes'),
+				'actions'=>array('create','update','imagenes','imagenes','loadImage','loadImageCenter','descarga','eliminar'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -207,4 +207,32 @@ class ProductoController extends Controller
 		print $model -> binaryFile;
 
 	}
+	public function actionloadImageCenter($id) {
+		$model = Imagenproducto::model()->findByPk($id);
+		header('Content-Type: ' . $model -> fileType);
+		echo "<div style='margin:auto auto auto auto'>";
+		print $model -> binaryFile;
+		echo "</div>";
+
+	}
+	public function actionDescarga($id){
+		$file=Imagenproducto::model()->findbyPk($id);
+		$file->documento;
+	}
+public function actionEliminar($id,$pag=null){
+		$file=Imagenproducto::model()->findbyPk($id);
+		$productos_id=$file->Productos_id;
+		$file->delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax'])){
+			if($pag!==NULL){	
+			if($pag=="doc")
+				$this->redirect(array('documentos','id'=>$productos_id));
+			else 
+				$this->redirect(array('imagenes','id'=>$productos_id));
+			}else
+				$this->redirect(array('imagenes','id'=>$productos_id));
+		}
+		}
 	}

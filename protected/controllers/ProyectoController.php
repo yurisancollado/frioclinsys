@@ -267,16 +267,19 @@ public function actionDescarga($id){
 		$file=Imagenproyecto::model()->findbyPk($id);
 		$file->documento;
 	}
-public function actionEliminar($id,$pag){
+public function actionEliminar($id,$pag=null){
 		$file=Imagenproyecto::model()->findbyPk($id);
 		$proyecto_id=$file->Proyectos_id;
 		$file->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax'])){
+			if($pag!==NULL){	
 			if($pag=="doc")
 				$this->redirect(array('documentos','id'=>$proyecto_id));
 			else 
+				$this->redirect(array('imagenes','id'=>$proyecto_id));
+			}else
 				$this->redirect(array('imagenes','id'=>$proyecto_id));
 		}
 		}
