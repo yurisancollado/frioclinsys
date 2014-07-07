@@ -38,10 +38,20 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'numero',
-		 array(            
-        'name'=>'fecha',
-        'value'=>'date("d-m-Y", strtotime($data->fecha))',
-    	),
+		array(
+            'name' => 'fecha',
+            'value'=>'$data->fecha',
+             'filter'=>$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model'=>$model,
+                'attribute'=>'fecha',
+                'htmlOptions' => array(
+                    'id' => 'event_date_search'
+                ), 
+                'options' => array(
+                    'dateFormat' => 'yy-mm-dd'
+                )
+            ), true)
+			),
 			
 		'monto',
 		/*
@@ -55,4 +65,10 @@ $('.search-form form').submit(function(){
 			'template'=>'{view}',
 		),
 	),
-)); ?>
+)); 
+Yii::app()->clientScript->registerScript('re-install-date-picker', "
+function reinstallDatePicker(id, data) {
+        //use the same parameters that you had set in your widget else the datepicker will be refreshed by default
+    $('#event_date_search').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['es'],{'dateFormat':'yy-mm-dd'}));
+}
+");?>

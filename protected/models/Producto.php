@@ -19,6 +19,7 @@ class Producto extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	 public $check;
 	public function tableName()
 	{
 		return 'productos';
@@ -106,7 +107,8 @@ class Producto extends CActiveRecord
 		$criteria->compare('especificacion',$this->especificacion,true);
 		$criteria->compare('costo',$this->costo,true);
 		$criteria->compare('estado',$this->estado,true);
-
+		$criteria->compare('check',$this->check);
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -121,5 +123,13 @@ class Producto extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	public function getCheck(){
+		$model = ClienteHasProductos::model() -> findByAttributes(array('Cliente_id' => $_GET['cliente'], 'Productos_id' => $this->id));
+		
+		if($model)
+		 return 1;
+		else 
+		 return 0;
 	}
 }

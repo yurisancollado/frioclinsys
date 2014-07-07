@@ -33,7 +33,7 @@ $this->menu2=array(
 	array('label'=>'Crear Factura', 'url'=>array('facturas/create','cliente'=>$cliente->id)),
 	array('label'=>'<hr>'),	
 	array('label'=>'Listar Productos', 'url'=>array('producto/listaproducto','cliente'=>$cliente->id)),
-	array('label'=>'Asociar Productos', 'url'=>array('producto/create','cliente'=>$cliente->id)),
+	array('label'=>'Asociar Productos', 'url'=>array('producto/asociarproducto','cliente'=>$cliente->id)),
 	
 );
 ?>

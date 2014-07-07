@@ -24,7 +24,7 @@ $this->menu2=array(
 	array('label'=>'Crear Proyectos', 'url'=>array('proyecto/create','cliente'=>$model->id)),
 	array('label'=>'<hr>'),
 	array('label'=>'Listar Productos', 'url'=>array('producto/listaproducto','cliente'=>$model->id)),
-	array('label'=>'Asociar Productos', 'url'=>array('producto/create','cliente'=>$model->id)),
+	array('label'=>'Asociar Productos', 'url'=>array('producto/asociarproducto','cliente'=>$model->id)),
 	
 );
 ?>

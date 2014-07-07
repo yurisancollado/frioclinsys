@@ -25,7 +25,7 @@ $this->menu2=array(
 	array('label'=>'Crear Proyectos', 'url'=>array('proyecto/create','cliente'=>$cliente->id)),
 	array('label'=>'<hr>'),
 	array('label'=>'Listar Productos', 'url'=>array('producto/listaproducto','cliente'=>$cliente->id)),
-	array('label'=>'Asociar Productos', 'url'=>array('producto/create','cliente'=>$cliente->id)),
+	array('label'=>'Asociar Productos', 'url'=>array('producto/asociarproducto','cliente'=>$cliente->id)),
 	
 );
 ?>
@@ -42,23 +42,21 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'filter'=>$model,
 	'afterAjaxUpdate' => 'reinstallDatePicker',
 	'columns'=>array(
-		'numero',	
+		array(
+		    'name'=>'numero',
+		    'value'=>'$data->numero',
+		    'filter'=>false,
+       ),
+       array(
+		    'name'=>'fecha',
+		    'value'=>'$data->fecha',
+		    'filter'=>false,
+       ),
     	array(
-            'name' => 'fecha',
-            'value'=>'$data->fecha',
-             'filter'=>$this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                'model'=>$model,
-                'attribute'=>'fecha',
-                'htmlOptions' => array(
-                    'id' => 'event_date_search'
-                ), 
-                'options' => array(
-                    'dateFormat' => 'yy-mm-dd'
-                )
-            ), true)
-			),
-    	
-		'monto',
+		    'name'=>'monto',
+		    'value'=>'$data->monto',
+		    'filter'=>false,
+       ),
 		/*
 		'binaryFile',
 		'fileType',

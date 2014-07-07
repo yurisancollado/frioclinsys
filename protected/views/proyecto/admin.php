@@ -43,12 +43,17 @@ $('.search-form form').submit(function(){
 		'filter'=>CHtml::listData(Cliente::model()->findAll(array('order'=>'razon_social')), 'id', 'razon_social'),
 		),
 		'nombre',
-		'tipoproyectos.nombre',
+		 array(
+		'name'=>'TipoProyecto_id',
+		'header'=>'Tipo',
+		'value'=>'$data->tipoproyectos->nombre',
+		'filter'=>CHtml::listData(Tipoproyecto::model()->findAll(array('order'=>'nombre')), 'id', 'nombre'),
+		),
 		'porcentaje',
 		array(
             'name' => 'fecha_inicio',
             'value'=>'$data->fecha_inicio',
-             'filter'=>$this->widget('zii.widgets.jui.CJuiDatepicker', array(
+             'filter'=>$this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'=>$model,
                 'attribute'=>'fecha_inicio',
                 'htmlOptions' => array(
@@ -59,11 +64,21 @@ $('.search-form form').submit(function(){
                 )
             ), true)
 			),
-    	 array(            
-        'name'=>'fecha_fin',
-        'value'=>'date("d-m-Y", strtotime($data->fecha_fin))',
-    	),
-		/*
+			array(
+            'name' => 'fecha_fin',
+            'value'=>'$data->fecha_fin',
+             'filter'=>$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model'=>$model,
+                'attribute'=>'fecha_fin',
+                'htmlOptions' => array(
+                    'id' => 'event_date_search2'
+                ), 
+                'options' => array(
+                    'dateFormat' => 'yy-mm-dd'
+                )
+            ), true)
+			),
+    	/*
 		'porcentaje',
 		'descripcion',
 		'fecha_inicio',
@@ -79,5 +94,11 @@ Yii::app()->clientScript->registerScript('re-install-date-picker', "
 function reinstallDatePicker(id, data) {
         //use the same parameters that you had set in your widget else the datepicker will be refreshed by default
     $('#event_date_search').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['es'],{'dateFormat':'yy-mm-dd'}));
+}
+");
+Yii::app()->clientScript->registerScript('re-install-date-picker', "
+function reinstallDatePicker(id, data) {
+        //use the same parameters that you had set in your widget else the datepicker will be refreshed by default
+    $('#event_date_search2').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['es'],{'dateFormat':'yy-mm-dd'}));
 }
 "); ?>

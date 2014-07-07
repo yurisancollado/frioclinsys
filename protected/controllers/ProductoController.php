@@ -37,7 +37,7 @@ class ProductoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','imagenes','imagenes','loadImage','loadImageCenter','descarga','eliminar'),
+				'actions'=>array('create','update','imagenes','imagenes','loadImage','loadImageCenter','descarga','eliminar','asociarproducto','ajaxupdate'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -235,4 +235,53 @@ public function actionEliminar($id,$pag=null){
 				$this->redirect(array('imagenes','id'=>$productos_id));
 		}
 		}
+	public function actionAsociarproducto()
+	{	
+		$model = new Producto('search');		
+		$model -> unsetAttributes();
+		// clear any default values
+		if (isset($_GET['Producto']))
+			$model -> attributes = $_GET['Producto'];
+		$this -> render('asociarproducto', array('model' => $model, ));	
+		
+	}
+public function actionAjaxupdate() {
+		$act = $_GET['act'];
+		$id = $_GET['cliente'];
+		
+		$autoIdAll = $_POST['autoId'];
+
+		if ($act == 'doDeleteAll') {
+			$listmodel = ClienteHasProductos::model() -> findAllByAttributes(array('Cliente_id' => $id));
+			foreach ($listmodel as $model) {
+				if ($model -> delete())
+					echo 'ok';
+			}
+		} else {
+			if (count($autoIdAll) > 0) {
+				foreach ($autoIdAll as $autoId) {
+					if ($act == 'doAdd') {
+						$model2 = ClienteHasProductos::model() -> findByAttributes(array('Cliente_id' => $id, 'Productos_id' => $autoId));
+						if (!$model2) {
+							$model = new ClienteHasProductos;
+							$model -> Cliente_id = $id;
+							$model -> Productos_id = $autoId;
+							if ($model -> save())
+								echo 'ok';
+						}
+					}
+					if ($act == 'doDelete') {
+						$model = ClienteHasProductos::model() -> findByAttributes(array('Cliente_id' => $id, 'Productos_id' => $autoId));
+						if ($model)
+							if ($model -> delete())
+								echo 'ok';
+							else
+								echo 'NO elimina';
+						else
+							echo 'NO Modelo';
+					}
+				}
+			}
+		}
+	}
 	}
