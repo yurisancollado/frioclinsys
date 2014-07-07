@@ -50,8 +50,8 @@ $this->menu2=array(
 	 array(
             'id'=>'autoId',
             'class'=>'CCheckBoxColumn',
-            'selectableRows' => '50',  
-            'checked' => '($data->check == "1")'                   
+            'selectableRows' => '50',
+            'checked'=>'$data->check3'                     
         ),
 	
 		'nombre',
@@ -65,8 +65,8 @@ $this->menu2=array(
 		array(
             'name'=>'check',
             'header'=>'Agregado',
-            'filter'=>array('1'=>'Yes','0'=>'No'),
-            'value'=>'($data->check=="1")?("Yes"):("No")'
+            'filter'=>array('1'=>'Si','0'=>'No'),
+            'value'=>'$data->check2'
         ),
 		
 		

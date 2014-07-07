@@ -132,4 +132,20 @@ class Producto extends CActiveRecord
 		else 
 		 return 0;
 	}
+	public function getCheck2(){
+		$model = ClienteHasProductos::model() -> findByAttributes(array('Cliente_id' => $_GET['cliente'], 'Productos_id' => $this->id));
+		
+		if($model)
+		 return "Si";
+		else 
+		 return "No";
+	}
+	public function getCheck3(){
+		$model = ClienteHasProductos::model() -> findByAttributes(array('Cliente_id' => $_GET['cliente'], 'Productos_id' => $this->id));
+		
+		if($model)
+		 return "checked";
+		else 
+		 return false;
+	}
 }
