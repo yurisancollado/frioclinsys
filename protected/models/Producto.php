@@ -148,4 +148,5 @@ class Producto extends CActiveRecord
 		else 
 		 return false;
 	}
+	
 }

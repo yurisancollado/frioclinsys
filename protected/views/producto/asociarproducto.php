@@ -82,7 +82,7 @@ function reloadGrid(data) {
 <?php echo CHtml::ajaxSubmitButton('Eliminar Todos',array('ajaxupdate','act'=>'doDeleteAll','cliente'=>$_GET['cliente']), array('success'=>'reloadGrid')); ?>
 <?php 
 if(isset($_GET['cliente']))
-	echo CHtml::button('Terminar',array('submit' => array('pedido/listapedido','cliente'=>$_GET['cliente']))); 
+	echo CHtml::button('Terminar',array('submit' => array('pedido/listaproducto','cliente'=>$_GET['cliente']))); 
 else
 	echo CHtml::button('Terminar',array('submit' => array('pedido/admin'))); ?>
 	
