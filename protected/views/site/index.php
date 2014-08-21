@@ -2,19 +2,32 @@
 /* @var $this SiteController */
 $this->pageTitle=Yii::app()->name;
 ?>
+
+<script src="<?php echo Yii::app() -> request -> baseUrl; ?>/js/modernizr-2.6.1.min.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="<?php echo Yii::app() -> request -> baseUrl; ?>/js/lean-slider.js"></script>
+    <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/lean-slider.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/sample-styles.css" type="text/css" />
   <div class="bg1">  
 		   <div class="content">
 			<div class="container_12">
-				<div class="slider_wrapper">
-                <div class="container_12">
-                    <div class="grid_12">
-					    <div id="camera_wrap" class="camera_wrap" style="display: block; height: 480px;">
-                            <div class="camera_fakehover"><div class="camera_target"><div class="cameraCont">
-                                        <div class="cameraSlide cameraSlide_1 cameracurrent" style="display: block; z-index: 999;">
-                                            <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/ImagenIndex.png" class="imgLoaded" data-alignment="" data-portrait="" width="940" height="522" style="visibility: visible; height: 480px; margin-top: 0px; position: absolute; margin-left: 0px; width: 940px;"><div class="camerarelative" style="width: 940px; height: 480px;"></div></div><div class="cameraSlide cameraSlide_2 cameranext" style="display: none; z-index: 1;"><div class="camerarelative" style="width: 940px; height: 522px;"></div></div><div class="cameraSlide cameraSlide_3 cameranext" style="z-index: 1; display: none;"><div class="camerarelative" style="width: 940px; height: 522px;"></div></div></div></div><div class="camera_overlayer"></div><div class="camera_target_content"><div class="cameraContents"><div class="cameraContent" style="display: none;"></div></div></div></div></div>  
-                    </div>        </div>
+				
+                <div class="slider-wrapper">
+        <div id="slider">
+            <div class="slide1">
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/imagen1.png" alt="" />
             </div>
-                
+            <div class="slide2">
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/imagen2.png" alt="" />
+            </div>
+            <div class="slide3">
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/imagen3.png" alt="" />
+            </div>
+        </div>
+        <div id="slider-direction-nav"></div>
+        <div id="slider-control-nav"></div>
+    </div>
                                       
                 </div>
             </div>
@@ -43,3 +56,12 @@ $this->pageTitle=Yii::app()->name;
                 </div>
             </div>
         </div>
+        
+<script type="text/javascript">
+    $(document).ready(function() {
+        var slider = $('#slider').leanSlider({
+            directionNav: '#slider-direction-nav',
+            controlNav: '#slider-control-nav'
+        });
+    });
+    </script>

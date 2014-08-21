@@ -19901,3 +19901,215 @@ REQUEST_URI=/frioclinsys/producto/listaproducto?cliente=3
 in C:\wamp\www\frioclinsys\protected\views\producto\listaproducto.php (50)
 in C:\wamp\www\frioclinsys\protected\controllers\ProductoController.php (254)
 in C:\wamp\www\frioclinsys\index.php (13)
+2014/07/29 03:31:40 [error] [php] urlencode() expects parameter 1 to be string, array given (C:\wamp\www\yii_fw\framework\web\CUrlManager.php:761)
+Stack trace:
+#0 C:\wamp\www\yii_fw\framework\base\CApplication.php(543): CUrlManager->createUrl()
+#1 C:\wamp\www\yii_fw\framework\web\CController.php(967): CWebApplication->createUrl()
+#2 C:\wamp\www\yii_fw\framework\base\CComponent.php(612) : eval()'d code(1): ProductoController->createUrl()
+#3 C:\wamp\www\yii_fw\framework\base\CComponent.php(612): eval()
+#4 C:\wamp\www\yii_fw\framework\zii\widgets\grid\CButtonColumn.php(340): CButtonColumn->evaluateExpression()
+#5 C:\wamp\www\yii_fw\framework\zii\widgets\grid\CButtonColumn.php(319): CButtonColumn->renderButton()
+#6 C:\wamp\www\yii_fw\framework\zii\widgets\grid\CGridColumn.php(151): CButtonColumn->renderDataCellContent()
+#7 C:\wamp\www\yii_fw\framework\zii\widgets\grid\CGridView.php(616): CButtonColumn->renderDataCell()
+#8 C:\wamp\www\yii_fw\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow()
+#9 C:\wamp\www\yii_fw\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#10 C:\wamp\www\yii_fw\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#11 unknown(0): CGridView->renderSection()
+#12 C:\wamp\www\yii_fw\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#13 C:\wamp\www\yii_fw\framework\zii\widgets\CBaseListView.php(135): CGridView->renderContent()
+#14 C:\wamp\www\yii_fw\framework\web\CBaseController.php(173): CGridView->run()
+#15 C:\wamp\www\frioclinsys\protected\views\producto\listaproducto.php(50): ProductoController->widget()
+#16 C:\wamp\www\yii_fw\framework\web\CBaseController.php(126): require()
+#17 C:\wamp\www\yii_fw\framework\web\CBaseController.php(95): ProductoController->renderInternal()
+#18 C:\wamp\www\yii_fw\framework\web\CController.php(869): ProductoController->renderFile()
+#19 C:\wamp\www\yii_fw\framework\web\CController.php(782): ProductoController->renderPartial()
+#20 C:\wamp\www\frioclinsys\protected\controllers\ProductoController.php(254): ProductoController->render()
+#21 C:\wamp\www\yii_fw\framework\web\actions\CInlineAction.php(49): ProductoController->actionListaproducto()
+#22 C:\wamp\www\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#23 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(133): ProductoController->runAction()
+#24 C:\wamp\www\yii_fw\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 C:\wamp\www\yii_fw\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#26 C:\wamp\www\yii_fw\framework\web\filters\CInlineFilter.php(58): ProductoController->filterAccessControl()
+#27 C:\wamp\www\yii_fw\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#28 C:\wamp\www\yii_fw\framework\web\CController.php(291): CFilterChain->run()
+#29 C:\wamp\www\yii_fw\framework\web\CController.php(265): ProductoController->runActionWithFilters()
+#30 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(282): ProductoController->run()
+#31 C:\wamp\www\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#32 C:\wamp\www\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#33 C:\wamp\www\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/producto/listaproducto?cliente=3
+in C:\wamp\www\frioclinsys\protected\views\producto\listaproducto.php (50)
+in C:\wamp\www\frioclinsys\protected\controllers\ProductoController.php (254)
+in C:\wamp\www\frioclinsys\index.php (13)
+2014/08/20 17:58:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=https://127.0.0.1/frioclinsys/site/contacto
+---
+2014/08/20 17:58:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=https://127.0.0.1/frioclinsys/site/contacto
+---
+2014/08/20 17:58:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=https://127.0.0.1/frioclinsys/site/contacto
+---
+2014/08/20 17:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=https://127.0.0.1/frioclinsys/site/contacto
+---
+2014/08/20 17:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=https://127.0.0.1/frioclinsys/site/contacto
+---
+2014/08/21 17:57:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/1.png"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('images/1.png')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/images/1.png
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/images/loading.gif"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/load...')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/css/images/loading.gif
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/images/bullets.png"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bull...')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/css/images/bullets.png
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/images/arrows.png"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/arro...')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/css/images/arrows.png
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:17:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/images/loading.gif"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/load...')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/css/images/loading.gif
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:17:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/images/arrows.png"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/arro...')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/css/images/arrows.png
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:17:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/images/bullets.png"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bull...')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/css/images/bullets.png
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:18:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/imagen1.jpg"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('images/imagen1....')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/images/imagen1.jpg
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:18:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/imagen3.jpg"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('images/imagen3....')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/images/imagen3.jpg
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:18:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/imagen2.jpg"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('images/imagen2....')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/images/imagen2.jpg
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:18:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/imagen2.jpg"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('images/imagen2....')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/images/imagen2.jpg
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:18:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/imagen3.jpg"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('images/imagen3....')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/images/imagen3.jpg
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
+2014/08/21 18:18:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/imagen1.jpg"' in C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('images/imagen1....')
+#1 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/frioclinsys/images/imagen1.jpg
+HTTP_REFERER=http://localhost:81/frioclinsys/
+---
