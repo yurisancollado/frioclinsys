@@ -20113,3 +20113,652 @@ Stack trace:
 REQUEST_URI=/frioclinsys/images/imagen1.jpg
 HTTP_REFERER=http://localhost:81/frioclinsys/
 ---
+2014/08/21 20:53:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:53:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:53:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:53:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:53:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 20:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "sendmail.php" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('sendmail.php')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('sendmail.php')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/sendmail.p...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/sendmail.php
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:32:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:32:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:32:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:32:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:32:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/form.c...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/form.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/contac...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/contacts.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:38:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:38:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:38:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:38:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:38:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:38:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:38:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:38:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:41:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:41:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:41:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:41:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:45:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:45:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:45:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:45:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:45:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:45:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:45:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---
+2014/08/21 21:45:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost:81/frioclinsys/site/contacto
+---

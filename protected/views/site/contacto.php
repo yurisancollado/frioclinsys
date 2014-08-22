@@ -2,7 +2,7 @@
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.bvalidator.js"></script>
 		<script type="text/javascript" src="js/bvalidator.lang.esp.js"></script>
-		<link rel="stylesheet" href="css/form.css">
+		<link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/contacts.css">
 
 	<body class="page1" id="top">
 		<div class="bg1">
@@ -40,15 +40,14 @@
 		</div>
 		<div class="grid_6">
 			<h3>Escríbenos</h3>
-			<form id="form" action="sendmail.php" method="post">
+			<form id="contact-form" action="sendmail.php" method="post">
 
 				<div class="success_wrapper">
 					<div class="success-message">
-						Contact form submitted
 					</div>
 				</div>
 				<label class="name">
-					<input class="_placeholder" type="text" placeholder="Nombre" data-bvalidator="alphanum,required" name="nombre">
+					<input type="text" placeholder="Nombre" data-bvalidator="alphanum,required" name="nombre">
 					<!--<span class="empty-message">*This field is required.</span> <span class="error-message">*This is not a valid name.</span> <span class="_placeholder" style="left: 0px; top: 0px; width: 386px; height: 41px;">Nombre*:</span>
 					--></label>
 					<br />
@@ -68,10 +67,9 @@
 				<div>
 					<br />
 					<div class="clear"></div>
-					<div class="btns">
-						<input type="submit" value="Enviar" onclick="alert('Gracias por comunicarse con nosotros, su correo será respondido a la brevedad posible.')">
-						<input type="reset" value="Borrar">
-					</div>
+					<div class="btns"><a href="#" data-type="submit" class="btn" onclick="alert('Gracias por comunicarse con nosotros, su correo será respondido a la brevedad posible.')">Enviar</a>
+                      <a href="#" data-type="reset" class="btn">Borrar</a>
+                      </div>
 				</div>
 			</form>
 		</div>
