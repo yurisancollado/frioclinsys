@@ -16,13 +16,22 @@ $this->pageTitle=Yii::app()->name;
                 <div class="slider-wrapper">
         <div id="slider">
             <div class="slide1">
-                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/imagen1.png" alt="" />
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/banner 1.jpg" alt="" />
             </div>
             <div class="slide2">
-                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/imagen2.png" alt="" />
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/banner 2.jpg" alt="" />
             </div>
             <div class="slide3">
-                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/imagen3.png" alt="" />
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/banner 3.jpg" alt="" />
+            </div>
+            <div class="slide4">
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/banner 4.jpg" alt="" />
+            </div>
+            <div class="slide5">
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/banner 5.jpg" alt="" />
+            </div>
+            <div class="slide6">
+                <img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/banner 6.jpg" alt="" />
             </div>
         </div>
         <div id="slider-direction-nav"></div>
@@ -35,7 +44,7 @@ $this->pageTitle=Yii::app()->name;
         <div class="bottom_block1">
             <div class="container_12">
                 <div class="grid_4">
-                    <figure class="page1_img"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/pic1.png" alt="" class=""></figure>
+                    <figure class="page1_img"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/minibanner.png" alt="" class=""></figure>
                 </div>
                 <div class="grid_8">
                     <h3 class="mb0">Gestión de mantenimiento
@@ -47,7 +56,7 @@ $this->pageTitle=Yii::app()->name;
             </div>
             <div class="container_12">
                 <div class="grid_4">
-                    <figure class="page1_img"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/pic1.png" alt="" class=""></figure>
+                    <figure class="page1_img"><img src="<?php echo Yii::app() -> request -> baseUrl; ?>/images/minibanner2.png" alt="" class=""></figure>
                 </div>
                 <div class="grid_8">
                     <h3 class="mb0">Proyectos<span class="text1 col1"><a href="#"></a></span></h3>
