@@ -5,8 +5,8 @@
  *
  * The followings are the available columns in table 'imagenproducto':
  * @property string $id
- * @property string $Productos_id
- * @property string $binaryFile
+ * @property string $Productos_Id
+ * @property string $direccion
  * @property string $fileType
  * @property string $fileName
  * @property string $tipo
@@ -30,12 +30,13 @@ class Imagenproducto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Productos_id, binaryFile, fileType, fileName', 'required'),
-			array('Productos_id, tipo, estado', 'length', 'max'=>10),
+			array('Productos_Id, direccion, fileType, fileName', 'required'),
+			array('Productos_Id, tipo, estado', 'length', 'max'=>10),
+			array('direccion', 'length', 'max'=>300),
 			array('fileType, fileName', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, Productos_id, binaryFile, fileType, fileName, tipo, estado', 'safe', 'on'=>'search'),
+			array('id, Productos_Id, direccion, fileType, fileName, tipo, estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,8 +48,6 @@ class Imagenproducto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		'producto' => array(self::BELONGS_TO, 'Producto', 'Productos_id'),
-		
 		);
 	}
 
@@ -59,8 +58,8 @@ class Imagenproducto extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'Productos_id' => 'Productos',
-			'binaryFile' => 'Imagen',
+			'Productos_Id' => 'Productos',
+			'direccion' => 'Direccion',
 			'fileType' => 'File Type',
 			'fileName' => 'File Name',
 			'tipo' => 'Tipo',
@@ -87,8 +86,8 @@ class Imagenproducto extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('Productos_id',$this->Productos_id,true);
-		$criteria->compare('binaryFile',$this->binaryFile,true);
+		$criteria->compare('Productos_Id',$this->Productos_Id,true);
+		$criteria->compare('direccion',$this->direccion,true);
 		$criteria->compare('fileType',$this->fileType,true);
 		$criteria->compare('fileName',$this->fileName,true);
 		$criteria->compare('tipo',$this->tipo,true);
@@ -108,17 +107,5 @@ class Imagenproducto extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-	public function getImagen($width = 100){
-		return html_entity_decode(CHtml::image(Yii::app()->controller->createUrl('producto/loadImage', array('id'=>$this->id))
-																				,'alt'
-																				,array('width'=>$width, 'height'=>100)
-																				));
-	}
-	public function getDocumento(){
-		 header("Content-type: ".$this->fileType);
-		 header('Content-Disposition: attachment; filename='.$this->fileName);
-		 header('Content-Transfer-Encoding: binary');
-		 print $this->binaryFile;
 	}
 }

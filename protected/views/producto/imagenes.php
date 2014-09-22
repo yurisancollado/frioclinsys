@@ -67,8 +67,10 @@ $this->menu2=array(
 	<?php foreach($producto->imagenes as $imagen){
 ?>
 		<div style="margin:2px; border:solid 1px #666; width:100px; height:100px; float:left;">
-		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'/producto/loadImage/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/descarga/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/eliminar/'.$imagen->id; ?>")'>
-			<img  src="<?php echo Yii::app()->request->baseUrl.'/producto/loadImage/'.$imagen->id ?>" alt="alt"height="100" width="100"/>
+			
+		<?php  //echo CHtml::image($imagen->direccion, "Imagen",array()); ?>
+		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'//'.$imagen->direccion.'","'.Yii::app()->request->baseUrl.'/producto/descarga/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/eliminar/'.$imagen->id; ?>")'>
+			<img  src="<?php echo Yii::app()->request->baseUrl.'/'.$imagen->direccion ?>" alt="alt"height="100" width="100"/>
 		</a>
 		</div>
 		<?php
@@ -96,7 +98,7 @@ $this->menu2=array(
 <script>	
 	$('#myModal').attr('align','center');
 	function modal( img,download,eliminar){
-		$('#myModal').html('<img  src="'+img+'" alt="alt"/><br/><a href="'+download+'">Descargar</a>   <a style="color:red" href="'+eliminar+'">Eliminar</a>');
+		$('#myModal').html('<img  src="'+img+'" alt="alt"/><br/>  <a href="'+download+'">Descargar</a>   <a style="color:red" href="'+eliminar+'">Eliminar</a>');
 		$('#myModal').dialog('open');
 	}
 	

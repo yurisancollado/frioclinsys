@@ -143,20 +143,43 @@ class ProductoController extends Controller {
 	public function actionImagenes($id) {
 		$producto = $this -> loadModel($id);
 		$model = new Imagenproducto;
-		$model -> Productos_id = $id;
-		if (!empty($_FILES['Imagenproducto']['tmp_name']['binaryFile'])) {
-			$file = CUploadedFile::getInstance($model, 'binaryFile');
-			$model -> fileName = $file -> name;
-			$model -> fileType = $file -> type;
-			$fp = fopen($file -> tempName, 'r');
-			$content = fread($fp, filesize($file -> tempName));
-			fclose($fp);
-			$model -> binaryFile = $content;
-			$model -> tipo = "2";
+		$model -> Productos_Id = $id;
+		if (isset($_POST['Imagenproducto'])) {
+			$model -> attributes = $_POST['Imagenproducto'];
 
-		}
+			//Reviso si esta creada la carpeta para guardar las imagenes y si no la creo
+			if (!is_dir(Yii::getPathOfAlias('webroot') . '/images/producto')) {
+				mkdir(Yii::getPathOfAlias('webroot') . '/images/producto', 0777, true);
+			}
+			//Genero un numero aleatorio para asignarlo como nombre provisional
+			$rnd = rand(0, 9999);
+			//creo un archivo a partir de la ruta especificada
+			$images = CUploadedFile::getInstance($model, "fileName");
+			if (isset($images) && count($images) > 0) {
+				//Asigno nombre provisional
+				$model -> fileName = "{$rnd}-{$images}";
+				$model -> fileType = $images -> type;
+				$model -> direccion = $model -> fileName;
+				$model -> tipo = "2";
+				//Guardo con nombre provisional
+				$model -> save();
+				//genero el nombre para guardar
+				$nombre = 'images/producto/' . $model -> id;
+				$extension = '.' . $images -> extensionName;
+				//guardo la imagen
+				if ($images -> saveAs($nombre . $extension)) {
+					//asigno nuevo nombre de la imagen al modelo
+					$model -> direccion = $nombre . $extension;
+					//guardo el modelo
+					$model -> save();
+
+					Yii::app() -> user -> setFlash('success', "FUNCIONO");
+
+				}
+			}
 		if ($model -> save())
-			$this -> redirect(array('imagenes', 'id' => $model -> Productos_id));
+			$this -> redirect(array('imagenes', 'id' => $model -> Productos_Id));
+			}
 		$this -> render('imagenes', array('producto' => $producto, 'model' => $model, ));
 	}
 
@@ -176,28 +199,7 @@ class ProductoController extends Controller {
 
 	}
 
-	public function actionDescarga($id) {
-		$file = Imagenproducto::model() -> findbyPk($id);
-		$file -> documento;
-	}
-
-	public function actionEliminar($id, $pag = null) {
-		$file = Imagenproducto::model() -> findbyPk($id);
-		$productos_id = $file -> Productos_id;
-		$file -> delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if (!isset($_GET['ajax'])) {
-			if ($pag !== NULL) {
-				if ($pag == "doc")
-					$this -> redirect(array('documentos', 'id' => $productos_id));
-				else
-					$this -> redirect(array('imagenes', 'id' => $productos_id));
-			} else
-				$this -> redirect(array('imagenes', 'id' => $productos_id));
-		}
-	}
-
+	
 	public function actionAsociarproducto() {
 		$model = new Producto('search');
 		$model -> unsetAttributes();
@@ -254,5 +256,29 @@ class ProductoController extends Controller {
 		$this -> render('listaproducto', array('model' => $model ));
 
 	}
+	public function actionDescarga($id) {
+		$file = Imagenproducto::model() -> findbyPk($id);
 
+		$path = Yii::app() -> request -> hostInfo . Yii::app() -> request -> baseURL .'/'. $file -> direccion;
+		
+				Yii::app() -> getRequest() -> sendFile($file->fileName, file_get_contents($path));
+		 
+	}
+
+	public function actionEliminar($id, $pag = null) {
+		$file = Imagenproducto::model() -> findbyPk($id);
+		$producto_id = $file -> Proyectos_Id;
+		$file -> delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if (!isset($_GET['ajax'])) {
+			if ($pag !== NULL) {
+				if ($pag == "doc")
+					$this -> redirect(array('documentos', 'id' => $proyecto_id));
+				else
+					$this -> redirect(array('imagenes', 'id' => $proyecto_id));
+			} else
+				$this -> redirect(array('imagenes', 'id' => $proyecto_id));
+		}
+	}
 }
