@@ -6,6 +6,7 @@
 $this->pageTitle="Proyecto Imagenes- ".$producto->nombre;
 $pag="img";
 $this->menu=array(
+	array('label'=>'Administrar Producto', 'url'=>array('admin')),
 	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
 	array('label'=>'Administrar Clientes', 'url'=>array('cliente/admin')),
 	);
@@ -13,11 +14,10 @@ $this->bolmenu2=true;
 $this->nombreCliente=$producto->nombre;
 $this->menu2=array(
 	array('label'=>'Crear Producto', 'url'=>array('create')),
-	array('label'=>'Ver Producto', 'url'=>array('view', 'id'=>$model->id)),		
-	array('label'=>'Modificar Producto', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Eliminar Producto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Esta seguro de eliminar el producto?')),
-	array('label'=>'<hr>'),
-	array('label'=>'Imagenes', 'url'=>'#', 'url'=>array('imagenes', 'id'=>$model->id)),
+	array('label'=>'Ver Producto', 'url'=>array('view', 'id'=>$producto->id)),		
+	array('label'=>'Modificar Producto', 'url'=>array('update', 'id'=>$producto->id)),
+	array('label'=>'Eliminar Producto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$producto->id),'confirm'=>'Esta seguro de eliminar el producto?')),
+	
 		
 );
 ?>
@@ -42,7 +42,7 @@ $this->menu2=array(
 
 ?>
 
-	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
+	<p class="note"  >Los campos con <span class="required">*</span> son requeridos.</p>
 
 
 
@@ -62,14 +62,32 @@ $this->menu2=array(
 
 </div><!-- form -->
 
+<div class="row buttons">
+		<p>Imagen Principal</p>
+		<?php foreach($producto->imagenprincipal as $imagen){
+?>
+		<div style="margin:2px; border:solid 1px #666; width:100px; height:100px; float:left;">
+			
+		<?php  //echo CHtml::image($imagen->direccion, "Imagen",array()); ?>
+		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'//'.$imagen->direccion.'","'.Yii::app()->request->baseUrl.'/producto/descarga/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/eliminar/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/imagenprincipal/'.$imagen->id; ?>")'>
+			<img  src="<?php echo Yii::app()->request->baseUrl.'/'.$imagen->direccion ?>" alt="alt"height="100" width="100"/>
+		</a>
+		</div>
+		<?php
+		
+	}
 
-<div>
+	?>
+</div>
+<br />
+<div class="row buttons">
+		<p>Imagen Secundarias</p>
 	<?php foreach($producto->imagenes as $imagen){
 ?>
 		<div style="margin:2px; border:solid 1px #666; width:100px; height:100px; float:left;">
 			
 		<?php  //echo CHtml::image($imagen->direccion, "Imagen",array()); ?>
-		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'//'.$imagen->direccion.'","'.Yii::app()->request->baseUrl.'/producto/descarga/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/eliminar/'.$imagen->id; ?>")'>
+		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'//'.$imagen->direccion.'","'.Yii::app()->request->baseUrl.'/producto/descarga/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/eliminar/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/producto/imagenprincipal/'.$imagen->id; ?>")'>
 			<img  src="<?php echo Yii::app()->request->baseUrl.'/'.$imagen->direccion ?>" alt="alt"height="100" width="100"/>
 		</a>
 		</div>
@@ -97,8 +115,8 @@ $this->menu2=array(
 </div>
 <script>	
 	$('#myModal').attr('align','center');
-	function modal( img,download,eliminar){
-		$('#myModal').html('<img  src="'+img+'" alt="alt"/><br/>  <a href="'+download+'">Descargar</a>   <a style="color:red" href="'+eliminar+'">Eliminar</a>');
+	function modal( img,download,eliminar,principal){
+		$('#myModal').html('<img  src="'+img+'" alt="alt"/><br/> <a href="'+principal+'" style="font-weight:400 ">Imagen Principal</a> <br/><a href="'+download+'">Descargar</a>   <a style="color:red" href="'+eliminar+'">Eliminar</a>');
 		$('#myModal').dialog('open');
 	}
 	

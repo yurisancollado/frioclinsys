@@ -20,6 +20,7 @@ class Producto extends CActiveRecord
 	 * @return string the associated database table name
 	 */
 	 public $check;
+	 public $imagen_principal;
 	public function tableName()
 	{
 		return 'productos';
@@ -39,7 +40,7 @@ class Producto extends CActiveRecord
 			array('modelo', 'length', 'max'=>50),
 			array('modelo','unique', 'message'=>'Ya se encuentra registrado el Modelo'),
 			array('costo', 'numerical'),
-			
+			array('imagen_principal', 'safe', 'on'=>'search'), 
 			array('especificacion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -58,7 +59,7 @@ class Producto extends CActiveRecord
 			 'marca'    => array(self::BELONGS_TO, 'Marca',    'Marca_id'),
 			  'tipo'    => array(self::BELONGS_TO, 'TipoProducto',    'TipoProducto_id'),
 			'imagenes' => array(self::HAS_MANY, 'Imagenproducto', 'Productos_Id', 'condition'=>'tipo=2'),
-			'imagenprincipal' => array(self::BELONGS_TO, 'Imagenproducto', 'Productos_Id', 'condition'=>'tipo=1'),
+			'imagenprincipal' => array(self::HAS_MANY, 'Imagenproducto', 'Productos_Id', 'condition'=>'tipo=1'),
 			
 			
 		);
@@ -99,6 +100,11 @@ class Producto extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		 $criteria->with = array(
+                    'imagenprincipal'=>array(
+                          'together'=>false
+                     )
+                );
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('TipoProducto_id',$this->TipoProducto_id,true);
@@ -113,9 +119,23 @@ class Producto extends CActiveRecord
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			  'sort'=>array(
+                                'attributes'=>array(
+                                        'imagen_principal'=>array(
+                                                'asc'=>'imagenprincipal.fileName', 
+                                                'desc'=>'imagenprincipal.fileName DESC', 
+                                        ),
+                                        '*',
+                                ),
+                        ),
 		));
 	}
-
+	 public function principalImagen() {
+                foreach ($this->imagenprincipal as $imagen) {
+                     return $this->imagen_principal = $imagen->direccion;
+                        
+                }
+        }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

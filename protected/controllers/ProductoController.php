@@ -27,7 +27,7 @@ class ProductoController extends Controller {
 	public function accessRules() {
 		return array( array('allow', // allow all users to perform 'index' and 'view' actions
 		'actions' => array('index', 'view'), 'users' => array('*'), ), array('allow', // allow authenticated user to perform 'create' and 'update' actions
-		'actions' => array('create', 'update', 'imagenes', 'imagenes', 'loadImage', 'loadImageCenter', 'descarga', 'eliminar', 'asociarproducto', 'ajaxupdate', 'listaproducto'), 'users' => array('@'), ), array('allow', // allow admin user to perform 'admin' and 'delete' actions
+		'actions' => array('create', 'update', 'imagenes', 'imagenes', 'loadImage', 'loadImageCenter', 'descarga', 'eliminar', 'asociarproducto', 'ajaxupdate', 'listaproducto', 'imagenprincipal'), 'users' => array('@'), ), array('allow', // allow admin user to perform 'admin' and 'delete' actions
 		'actions' => array('admin', 'delete'), 'users' => array('admin'), ), array('deny', // deny all users
 		'users' => array('*'), ), );
 	}
@@ -177,9 +177,9 @@ class ProductoController extends Controller {
 
 				}
 			}
-		if ($model -> save())
-			$this -> redirect(array('imagenes', 'id' => $model -> Productos_Id));
-			}
+			if ($model -> save())
+				$this -> redirect(array('imagenes', 'id' => $model -> Productos_Id));
+		}
 		$this -> render('imagenes', array('producto' => $producto, 'model' => $model, ));
 	}
 
@@ -199,7 +199,6 @@ class ProductoController extends Controller {
 
 	}
 
-	
 	public function actionAsociarproducto() {
 		$model = new Producto('search');
 		$model -> unsetAttributes();
@@ -251,34 +250,57 @@ class ProductoController extends Controller {
 	}
 
 	public function actionListaproducto() {
-		$model = new ClienteHasProductos('search');
-		$model -> unsetAttributes();
-		$this -> render('listaproducto', array('model' => $model ));
+		$model=new ClienteHasProductos('search');
+		$model->unsetAttributes();
+		$this->render('listaproducto',array(
+			'model'=>$model,
+		));
 
 	}
+
 	public function actionDescarga($id) {
 		$file = Imagenproducto::model() -> findbyPk($id);
 
-		$path = Yii::app() -> request -> hostInfo . Yii::app() -> request -> baseURL .'/'. $file -> direccion;
-		
-				Yii::app() -> getRequest() -> sendFile($file->fileName, file_get_contents($path));
-		 
+		$path = Yii::app() -> request -> hostInfo . Yii::app() -> request -> baseURL . '/' . $file -> direccion;
+
+		Yii::app() -> getRequest() -> sendFile($file -> fileName, file_get_contents($path));
+
 	}
 
 	public function actionEliminar($id, $pag = null) {
 		$file = Imagenproducto::model() -> findbyPk($id);
-		$producto_id = $file -> Proyectos_Id;
+		$producto_id = $file -> Productos_Id;
 		$file -> delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if (!isset($_GET['ajax'])) {
 			if ($pag !== NULL) {
 				if ($pag == "doc")
-					$this -> redirect(array('documentos', 'id' => $proyecto_id));
+					$this -> redirect(array('documentos', 'id' => $producto_id));
 				else
-					$this -> redirect(array('imagenes', 'id' => $proyecto_id));
+					$this -> redirect(array('imagenes', 'id' => $producto_id));
 			} else
-				$this -> redirect(array('imagenes', 'id' => $proyecto_id));
+				$this -> redirect(array('imagenes', 'id' => $producto_id));
 		}
 	}
+
+	public function actionImagenprincipal($id) {
+		$nuevo = Imagenproducto::model() -> findbyPk($id);
+		$producto_id = $nuevo -> Productos_Id;
+		$producto = $this -> loadModel($producto_id);
+		foreach ($producto->imagenprincipal as $viejo) {
+			$viejo -> tipo = 2;
+			$viejo -> save();
+		}
+
+		$nuevo -> tipo = 1;
+		if ($nuevo -> save()) {
+			if (!isset($_GET['ajax'])) {
+				$this -> redirect(array('imagenes', 'id' => $producto_id));
+			}
+		}
+
+		$this -> render('update', array('model' => $model, ));
+	}
+
 }

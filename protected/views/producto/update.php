@@ -19,6 +19,8 @@ $this->menu2=array(
 	array('label'=>'Crear Producto', 'url'=>array('create')),
 	array('label'=>'Ver Producto', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Eliminar Producto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Esta seguro de eliminar el producto?')),
+	array('label'=>'<hr>'),
+	array('label'=>'Imagenes', 'url'=>'#', 'url'=>array('imagenes', 'id'=>$model->id)),
 );
 ?>
 

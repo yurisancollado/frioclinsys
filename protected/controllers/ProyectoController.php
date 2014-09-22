@@ -27,7 +27,7 @@ class ProyectoController extends Controller {
 	public function accessRules() {
 		return array( array('allow', // allow all users to perform 'index' and 'view' actions
 		'actions' => array('index', 'view'), 'users' => array('*'), ), array('allow', // allow authenticated user to perform 'create' and 'update' actions
-		'actions' => array('create', 'update', 'documentos', 'imagenes', 'loadImage', 'loadImageCenter', 'listaproyecto', 'descarga', 'eliminar', 'miproyecto', 'miproyecto_imagen'), 'users' => array('@'), ), array('allow', // allow admin user to perform 'admin' and 'delete' actions
+		'actions' => array('create', 'update', 'documentos', 'imagenes', 'loadImage', 'loadImageCenter', 'listaproyecto', 'descarga', 'eliminar', 'miproyecto', 'miproyecto_imagen', 'imagenprincipal'), 'users' => array('@'), ), array('allow', // allow admin user to perform 'admin' and 'delete' actions
 		'actions' => array('admin', 'delete'), 'users' => array('admin'), ), array('deny', // deny all users
 		'users' => array('*'), ), );
 	}
@@ -145,7 +145,7 @@ class ProyectoController extends Controller {
 
 	public function actionDocumentos($id) {
 		Yii::app() -> getClientScript() -> registerCoreScript('jquery');
-		
+
 		$proyecto = $this -> loadModel($id);
 		$model = new Imagenproyecto;
 		$model -> Proyectos_id = $id;
@@ -183,9 +183,9 @@ class ProyectoController extends Controller {
 
 				}
 			}
-		if ($model -> save())
-			$this -> redirect(array('documentos', 'id' => $model -> Proyectos_id));
-			}
+			if ($model -> save())
+				$this -> redirect(array('documentos', 'id' => $model -> Proyectos_id));
+		}
 		$this -> render('documentos', array('proyecto' => $proyecto, 'model' => $model, ));
 	}
 
@@ -260,10 +260,10 @@ class ProyectoController extends Controller {
 	public function actionDescarga($id) {
 		$file = Imagenproyecto::model() -> findbyPk($id);
 
-		$path = Yii::app() -> request -> hostInfo . Yii::app() -> request -> baseURL .'/'. $file -> direccion;
-		
-				Yii::app() -> getRequest() -> sendFile($file->fileName, file_get_contents($path));
-		 
+		$path = Yii::app() -> request -> hostInfo . Yii::app() -> request -> baseURL . '/' . $file -> direccion;
+
+		Yii::app() -> getRequest() -> sendFile($file -> fileName, file_get_contents($path));
+
 	}
 
 	public function actionEliminar($id, $pag = null) {
@@ -295,5 +295,7 @@ class ProyectoController extends Controller {
 		$model -> Proyectos_id = $id;
 		$this -> render('miproyecto_imagen', array('proyecto' => $proyecto, 'model' => $model, ));
 	}
+
+	
 
 }

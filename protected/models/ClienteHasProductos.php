@@ -99,5 +99,10 @@ class ClienteHasProductos extends CActiveRecord
 		$criteria -> addCondition('Cliente_id=' . $id);
 		return new CActiveDataProvider($this, array('criteria' => $criteria, ));
 	}
+	public function clienteFactura($id = NULL) {
+		$criteria = new CDbCriteria;
+		$criteria -> addCondition('Cliente_id=' . $id);
+		return new CActiveDataProvider($this, array('criteria' => $criteria, ));
+	}
 	
 }

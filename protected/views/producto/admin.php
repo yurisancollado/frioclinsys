@@ -34,7 +34,13 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		
+	
+		array(
+                'name'=>'imagen_principal', 
+                'header'=>'Imagen',
+                'type'=>'html',
+            	'value'=>'(!empty($data->principalImagen()))?CHtml::image(Yii::app()->assetManager->publish($data->principalImagen()),"",array("style"=>"width:100px;height:100px;")):"Sin imagen"',
+                ),
 		'nombre',
 		'modelo',
 		 array(
