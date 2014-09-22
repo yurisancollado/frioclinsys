@@ -42,8 +42,8 @@ class ClienteHasProductos extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		 'clientes' => array(self::BELONGS_TO, 'Cliente', 'Cliente_id'),
-		 'productos' => array(self::BELONGS_TO, 'Producto', 'Productos_id'),
+		 'cliente' => array(self::BELONGS_TO, 'Cliente', 'Cliente_id'),
+		 'producto' => array(self::BELONGS_TO, 'Producto', 'Productos_id'),
 		);
 	}
 
@@ -99,10 +99,6 @@ class ClienteHasProductos extends CActiveRecord
 		$criteria -> addCondition('Cliente_id=' . $id);
 		return new CActiveDataProvider($this, array('criteria' => $criteria, ));
 	}
-	public function clienteFactura($id = NULL) {
-		$criteria = new CDbCriteria;
-		$criteria -> addCondition('Cliente_id=' . $id);
-		return new CActiveDataProvider($this, array('criteria' => $criteria, ));
-	}
+	
 	
 }

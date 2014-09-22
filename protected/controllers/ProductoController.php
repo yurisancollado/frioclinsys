@@ -250,12 +250,8 @@ class ProductoController extends Controller {
 	}
 
 	public function actionListaproducto() {
-		$model=new ClienteHasProductos('search');
-		$model->unsetAttributes();
-		$this->render('listaproducto',array(
-			'model'=>$model,
-		));
-
+		$dataProvider = ClienteHasProductos::model() -> clienteProducto($_GET['cliente']);
+		$this -> render('listaproducto', array('dataProvider' => $dataProvider, 'model' => new ClienteHasProductos, ));
 	}
 
 	public function actionDescarga($id) {
