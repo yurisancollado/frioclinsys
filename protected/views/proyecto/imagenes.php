@@ -63,8 +63,8 @@ $this->menu2=array(
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'binaryFile'); ?>
-		<?php echo $form->fileField($model,'binaryFile'); ?>
+		<?php echo $form->labelEx($model,'fileName'); ?>
+		<?php echo CHtml::activeFileField($model, 'fileName');?>
 
 	</div>
 
@@ -83,10 +83,13 @@ $this->menu2=array(
 	<?php foreach($proyecto->imagenes as $imagen){
 ?>
 		<div style="margin:2px; border:solid 1px #666; width:100px; height:100px; float:left;">
-		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'/proyecto/loadImage/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/proyecto/descarga/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/proyecto/eliminar/'.$imagen->id; ?>")'>
-			<img  src="<?php echo Yii::app()->request->baseUrl.'/proyecto/loadImage/'.$imagen->id ?>" alt="alt"height="100" width="100"/>
+			
+		<?php  //echo CHtml::image($imagen->direccion, "Imagen",array()); ?>
+		<a href='#' onclick='modal("<?php echo Yii::app()->request->baseUrl.'//'.$imagen->direccion.'","'.Yii::app()->request->baseUrl.'/proyecto/descarga/'.$imagen->id.'","'.Yii::app()->request->baseUrl.'/proyecto/eliminar/'.$imagen->id; ?>")'>
+			<img  src="<?php echo Yii::app()->request->baseUrl.'/'.$imagen->direccion ?>" alt="alt"height="100" width="100"/>
 		</a>
 		</div>
+		
 		<?php
 		
 	}

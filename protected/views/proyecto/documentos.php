@@ -37,7 +37,7 @@ $this->menu2=array(
 );
 ?>
 
-<h5>Imagenes: <?php echo $proyecto->nombre; ?></h5>
+<h5>Documentos: <?php echo $proyecto->nombre; ?></h5>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -62,9 +62,9 @@ $this->menu2=array(
 
 
 		<div class="row">
-		<?php echo $form->labelEx($model,'binaryFile'); ?>
-		<?php echo $form->fileField($model,'binaryFile'); ?>
-		<?php echo $form->error($model,'binaryFile'); ?>
+		<?php echo $form->labelEx($model,'fileName'); ?>
+		<?php echo CHtml::activeFileField($model, 'fileName');?>
+
 
 	</div>
 

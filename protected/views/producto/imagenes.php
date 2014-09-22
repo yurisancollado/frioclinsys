@@ -47,8 +47,8 @@ $this->menu2=array(
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'binaryFile'); ?>
-		<?php echo $form->fileField($model,'binaryFile'); ?>
+		<?php echo $form->labelEx($model,'fileName'); ?>
+		<?php echo CHtml::activeFileField($model, 'fileName');?>
 
 	</div>
 

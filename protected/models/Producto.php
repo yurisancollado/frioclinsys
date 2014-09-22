@@ -58,6 +58,8 @@ class Producto extends CActiveRecord
 			 'marca'    => array(self::BELONGS_TO, 'Marca',    'Marca_id'),
 			  'tipo'    => array(self::BELONGS_TO, 'TipoProducto',    'TipoProducto_id'),
 			'imagenes' => array(self::HAS_MANY, 'Imagenproducto', 'Productos_Id', 'condition'=>'tipo=2'),
+			'imagenprincipal' => array(self::BELONGS_TO, 'Imagenproducto', 'Productos_Id', 'condition'=>'tipo=1'),
+			
 			
 		);
 	}
