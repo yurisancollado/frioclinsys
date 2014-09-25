@@ -66,7 +66,7 @@
 						array('label'=>'Mi Cuenta', 'url'=>array('/cliente/micuenta'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Facturas', 'url'=>array('/facturas/mifactura'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Proyectos', 'url'=>array('/proyecto/miproyecto'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Catalogo', 'url'=>array('/producto/catalogo'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Catalogo', 'url'=>array('/site/catalogo'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),		

@@ -122,4 +122,18 @@ class SiteController extends Controller
 	{			
 		$this->render('contacto');
 	}
+	public function actionCatalogo()
+	{						
+		//$this->render('catalogo');
+		$client=new SoapClient('http://localhost:81/webservice/index.php?r=usuario/quote');
+		echo $client->getPrice('GOOGLE');
+		foreach ($client->getUsuarios() as $key) {
+			echo $key[1];
+		}
+	}
+	public function actionDetalle($id)
+	{
+						
+		$this->render('catalogo_producto',array('id'=>$id));
+	}
 }
