@@ -50,10 +50,10 @@ return array(
 		),
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=ilfra_develop_frioclin',
+			'connectionString' => 'mysql:host=localhost;dbname=data_frioclin',
 			'emulatePrepare' => true,
-			'username' => 'ilfra_frio',
-			'password' => 'FrioClin873',
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		'coreMessages'=>array(
