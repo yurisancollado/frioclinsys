@@ -128,7 +128,7 @@
 				array('label'=>'Empresa', 'url'=>array('/site/empresa')),
 				array('label'=>'Servicios', 'url'=>array('/site/servicio')),
 				array('label'=>'Contacto', 'url'=>array('/site/contacto')),
-				array('label'=>'Login', 'url'=>array('/site/login')),
+				array('label'=>'Intranet', 'url'=>array('/site/login')),
 				
 			),
 		));			
