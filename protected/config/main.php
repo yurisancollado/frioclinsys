@@ -50,7 +50,7 @@ return array(
 		),
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=data_frioclin',
+			'connectionString' => 'mysql:host=localhost;dbname=ilfra_develop_frioclin',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
