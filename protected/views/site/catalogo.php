@@ -66,7 +66,8 @@
 								$productoCliente=ClienteHasProductos::model()->findByAttributes(array('Cliente_id'=>Yii::app() -> user -> id, 'Productos_id'=>$producto->id));	
 								if($productoCliente!=NULL){
 								$cont++;
-								$imagenPrincipal;
+								$imagenPrincipal=null;
+								if($imagenPrincipa!==null)
 								foreach($producto->imagenprincipal as $imagen){
 									$imagenPrincipal=$imagen;
 								}

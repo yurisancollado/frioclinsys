@@ -306,7 +306,7 @@ class ProductoController extends Controller {
 		$this -> render('site','catalogo', array());
 	}
 	
-	public function actionCatalogo() {
+	public function actionCatalogo2() {
 		$dataProvider=Producto::model()->findAllByAttributes(array('estado'=>1));
 		$this -> render('catalogo', array('dataProvider' => $dataProvider ));
 

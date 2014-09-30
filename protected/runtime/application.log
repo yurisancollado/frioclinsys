@@ -37001,3 +37001,199 @@ Stack trace:
 REQUEST_URI=/frioclinsys/site/catalogo
 HTTP_REFERER=http://localhost:81/frioclinsys/proyecto/miproyecto
 ---
+2014/09/29 16:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/09/29 16:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/09/29 16:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/09/29 16:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/09/30 05:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bvalida...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/bvalidator.lang.esp.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/09/30 05:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "css" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bvalid...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/css/bvalidator.css
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/09/30 05:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery.bvalidator.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/09/30 05:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "js" solicitada.' in C:\xampp\htdocs\yii_fw\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery-...')
+#3 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\frioclinsys\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/frioclinsys/site/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost/frioclinsys/site/contacto
+---
+2014/09/30 05:29:51 [error] [php] Undefined variable: imagenPrincipal (C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo_producto.php:69)
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii_fw\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php(132): SiteController->render()
+#3 unknown(0): SiteController->actionDetalle()
+#4 C:\xampp\htdocs\yii_fw\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yii_fw\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/site/detalle/4
+in C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo_producto.php (69)
+in C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php (132)
+in C:\xampp\htdocs\frioclinsys\index.php (13)
+2014/09/30 05:30:06 [error] [php] Undefined variable: imagenPrincipal (C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo_producto.php:69)
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii_fw\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php(132): SiteController->render()
+#3 unknown(0): SiteController->actionDetalle()
+#4 C:\xampp\htdocs\yii_fw\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yii_fw\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/site/detalle/4
+in C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo_producto.php (69)
+in C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php (132)
+in C:\xampp\htdocs\frioclinsys\index.php (13)
+2014/09/30 05:30:17 [error] [php] Undefined variable: imagenPrincipal (C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo_producto.php:69)
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii_fw\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php(132): SiteController->render()
+#3 unknown(0): SiteController->actionDetalle()
+#4 C:\xampp\htdocs\yii_fw\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yii_fw\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/site/detalle/4
+in C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo_producto.php (69)
+in C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php (132)
+in C:\xampp\htdocs\frioclinsys\index.php (13)
+2014/09/30 05:31:30 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo.php:77)
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii_fw\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php(127): SiteController->render()
+#3 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(49): SiteController->actionCatalogo()
+#4 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii_fw\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/site/catalogo
+in C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo.php (77)
+in C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php (127)
+in C:\xampp\htdocs\frioclinsys\index.php (13)
+2014/09/30 05:31:32 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo.php:77)
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii_fw\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php(127): SiteController->render()
+#3 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(49): SiteController->actionCatalogo()
+#4 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii_fw\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/site/catalogo
+in C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo.php (77)
+in C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php (127)
+in C:\xampp\htdocs\frioclinsys\index.php (13)
+2014/09/30 05:32:06 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo.php:77)
+Stack trace:
+#0 C:\xampp\htdocs\yii_fw\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii_fw\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php(127): SiteController->render()
+#3 C:\xampp\htdocs\yii_fw\framework\web\actions\CInlineAction.php(49): SiteController->actionCatalogo()
+#4 C:\xampp\htdocs\yii_fw\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii_fw\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii_fw\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii_fw\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii_fw\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\frioclinsys\index.php(13): CWebApplication->run()
+REQUEST_URI=/frioclinsys/site/catalogo
+in C:\xampp\htdocs\frioclinsys\protected\views\site\catalogo.php (77)
+in C:\xampp\htdocs\frioclinsys\protected\controllers\SiteController.php (127)
+in C:\xampp\htdocs\frioclinsys\index.php (13)
