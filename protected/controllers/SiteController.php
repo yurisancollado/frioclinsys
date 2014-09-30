@@ -123,8 +123,12 @@ class SiteController extends Controller
 		$this->render('contacto');
 	}
 	public function actionCatalogo()
-	{						
-		$this->render('catalogo');
+	{
+		if(isset($_GET['id']))
+			$selector="#c".$_GET['id'];
+		else
+			$selector=".all";							
+		$this->render('catalogo',array("selector"=>$selector));
 	}
 	public function actionDetalle($id)
 	{
