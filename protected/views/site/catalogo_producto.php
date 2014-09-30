@@ -1,6 +1,6 @@
 <?php $producto = Producto::model() -> findByPk($id);
 $marcaProducto =Marca::model()->findByPk($producto->Marca_id);
-$imagenPrincipal;
+$imagenPrincipal=NULL;
 foreach ($producto->imagenprincipal as $imagen) {
 	$imagenPrincipal = $imagen;
 }
@@ -34,7 +34,7 @@ foreach ($producto->imagenprincipal as $imagen) {
 												<ul>
 													<?php 	foreach(Marca::model()->findAll(array('order'=>'Nombre')) as $marca){?>
 													<li class="category-top_un">
-														<span class="top-span"><a class="category-top_un" href=""><?php echo $marca -> Nombre; ?></a></span>
+														<span class="top-span"><a class="category-top_un" href="../catalogo/id/<?php echo $marca->id; ?>"><?php echo $marca -> Nombre; ?></a></span>
 													</li>
 												<?php 	} ?>
 												</ul>
@@ -66,7 +66,13 @@ foreach ($producto->imagenprincipal as $imagen) {
 
 
 <div id="productMainImage" class="centeredContent back">
+<?php if(!is_null($imagenPrincipal)){ ?>
 	<span class="image"><img src="<?php echo Yii::app() -> request -> baseUrl . '/' .$imagenPrincipal -> direccion; ?>" alt="" title="" width="204" height="126"></span>
+<?php }else{?>
+	<span class="image"><img src="http://placehold.it/204x126" alt="" title="" width="204" height="126"></span>
+<?php } ?>
+
+	
 	
 </div>
 	<div class="name-type bot-border"><?php echo $producto -> nombre; ?></div>	

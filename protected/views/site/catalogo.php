@@ -1,5 +1,3 @@
-
-
 <link rel="stylesheet" href="<?php echo Yii::app() -> request -> baseUrl; ?>/css/catalogo.css" type="text/css" />
 <body class="page1" id="top">
 	<div class="bg1">
@@ -30,7 +28,7 @@
 													foreach(Marca::model()->findAll(array('order'=>'Nombre')) as $marca){
 														$c_id++;?>
 													<li class="category-top_un">
-														<span class="top-span"><a class="category-top_un" href="#" onclick="show('<?php echo $c_id; ?>')" id="m<?php echo $c_id; ?>"><?php echo $marca -> Nombre; ?></a></span>
+														<span class="top-span"><a class="category-top_un" href="#" onclick="show('<?php echo $marca->id; ?>')" id="m<?php echo $marca->id; ?>"><?php echo $marca -> Nombre; ?></a></span>
 													</li>
 												<?php 	} ?>
 												</ul>
@@ -47,7 +45,7 @@
 									$c_id++;
 									?>
 <!--==============================Comienza MARCA=================================-->										
-<div class="marcas" id="c<?php echo $c_id; ?>">								
+<div class="marcas all" id="c<?php echo $marca->id; ?>">								
 <div class="column-center-padding">
 
 									<div class="centerColumn" id="indexDefault">
@@ -66,16 +64,21 @@
 								$productoCliente=ClienteHasProductos::model()->findByAttributes(array('Cliente_id'=>Yii::app() -> user -> id, 'Productos_id'=>$producto->id));	
 								if($productoCliente!=NULL){
 								$cont++;
-								$imagenPrincipal;
+								$imagenPrincipal=NULL;
 								foreach($producto->imagenprincipal as $imagen){
 									$imagenPrincipal=$imagen;
 								}
+								
+									
 								?>					
 											<div class="centerBoxContentsFeatured centeredContent back" style="width:33%;">
 												<div class="product-col" style="margin-left:9px;" >
 													<div class="img">
+											<?php	if(!is_null($imagenPrincipal)){ ?>
 														<a href="<?php echo Yii::app() -> request -> baseUrl . '/site/detalle/' . $producto -> id; ?>"><img src="<?php echo Yii::app() -> request -> baseUrl . '/' . $imagenPrincipal -> direccion; ?>" alt="" title="" width="204" height="126"></a>
-													</div>
+											<?php } else{?>
+													<a href="<?php echo Yii::app() -> request -> baseUrl . '/site/detalle/' . $producto -> id; ?>"><img src="http://placehold.it/204x126" alt="" title="" width="204" height="126"/></a>	
+											<?php }	?>	</div>
 													<div class="prod-info">
 														<a class="name" href="<?php echo Yii::app() -> request -> baseUrl . '/site/detalle/' . $producto -> id; ?>"><?php echo $producto -> nombre; ?></a>
 														
@@ -121,5 +124,6 @@ function show(id){
 	$('.marcas').hide();
 	$('#c'+id).show();
 }
+$('<?php echo $selector?>').show();
 	
 </script>
